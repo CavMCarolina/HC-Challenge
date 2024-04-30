@@ -11,6 +11,25 @@
     color: variaveis.$cor_texto;
 }
 
+header {
+    // background-color: variaveis.$branco;
+    @include mixins.borda-y(none, blue);
+}
+
+#cabecalho {
+
+}
+
+.bg_video {
+    position: absolute;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+    background: url('../imagens/video_bg-img.jpg') no-repeat center;
+    background-size: cover;
+}
+
 /* Desktop */
 @media screen and (min-width:1024px) {
     #cabecalho {

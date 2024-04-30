@@ -13,9 +13,19 @@
     font-weight: $weight;
 }
 
-@mixin borda($cor, $radius) {
-    border: $cor;
+@mixin borda-total($cor, $radius) {
+    border: 1px solid $cor;
     border-radius: $radius;
+}
+
+@mixin borda-x($direita, $esquerda) {
+    border-right: 1px solid $direita;
+    border-left: 1px solid $esquerda;
+}
+
+@mixin borda-y($top, $bottom) {
+    border-top: 1px solid $top;
+    border-bottom: 1px solid $bottom;
 }
 
 @mixin flex($direction, $justify, $align) {

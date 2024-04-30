@@ -10,6 +10,21 @@
   color: rgb(52, 52, 52);
 }
 
+header {
+  border-top: 1px solid none;
+  border-bottom: 1px solid blue;
+}
+
+.bg_video {
+  position: absolute;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -100;
+  background: url("../imagens/video_bg-img.jpg") no-repeat center;
+  background-size: cover;
+}
+
 /* Desktop */
 @media screen and (min-width: 1024px) {
   #cabecalho {
