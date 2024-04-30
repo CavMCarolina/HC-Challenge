@@ -1,0 +1,41 @@
+@use 'mixins';
+@use 'variaveis';
+
+/* Estilizações Gerais */
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&family=Biryani:wght@200;300;400;600;700;800;900&family=Imprima&family=Manjari:wght@100;400;700&family=Metrophobic&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    @include mixins.margem(0, 0);
+    @include mixins.texto(variaveis.$pequeno, 400);
+    font-family: "Metrophobic", sans-serif;
+    color: variaveis.$cor_texto;
+}
+
+/* Desktop */
+@media screen and (min-width:1024px) {
+    #cabecalho {
+        @include mixins.flex(row, space-between, center)
+    }
+
+    #id {
+        @include mixins.flex(row, space-between, center)
+    }
+}
+
+/* Tablet */
+@media screen and (min-width:768px) and (max-width:1023px){
+    #cabecalho {
+        @include mixins.flex(row, space-between, center)
+    }  
+}
+
+/* Celular */
+@media screen and (max-width:767px) {
+    #cabecalho {
+        @include mixins.flex(row, space-between, center)
+    } 
+
+    #id {
+        @include mixins.flex(column, center, center)
+    }
+}
