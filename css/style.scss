@@ -5,56 +5,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&family=Biryani:wght@200;300;400;600;700;800;900&family=Imprima&family=Manjari:wght@100;400;700&family=Metrophobic&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
-    @include mixins.margem(0, 0);
+    @include mixins.espacamento(0, 0);
     @include mixins.texto(variaveis.$pequeno, 400);
     font-family: "Metrophobic", sans-serif;
     color: variaveis.$cor_texto;
 }
 
-header {
-    // background-color: variaveis.$branco;
-    @include mixins.borda-y(none, blue);
+// Coisas que só aparecerão no mobile
+.mobile_show {
+    display: none;
 }
 
-#cabecalho {
-
+// Coisas que não aparecerão no mobile
+.mobile_hide {
+    display: block
 }
 
-.bg_video {
-    position: absolute;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -100;
-    background: url('../imagens/video_bg-img.jpg') no-repeat center;
-    background-size: cover;
+#header_container {
+    @include mixins.espacamento(1rem 15rem, 0); 
 }
+
+#logos {
+    @include mixins.espacamento(0, 1rem 0);
+    @include mixins.flex(row, none, center, wrap, 8%);
+}
+
+#menu {
+    @include mixins.flex(row, space-around, center, nowrap, 10px);
+    @include mixins.borda-total(blue, 50px);
+
+    img, svg {
+        @include mixins.size(1.875rem, 1.875rem);
+    }
+
+    a {
+        @include mixins.link(none);
+    }
+}
+
+// header {
+//     background-color: rgba(13, 169, 220, 1);
+//     @include mixins.borda-y(none, variaveis.$cor_principal);
+// }
+
+// #menu {
+//     background-color: variaveis.$nuvem;
+//     border: 1px solid blue;
+//     border-radius: 100px;
+// }
+
+// main {
+//     background: url('../imagens/background.jpg') no-repeat center;
+//     position: absolute;
+//     z-index: -100;
+//     width: 100%;
+// }
 
 /* Desktop */
 @media screen and (min-width:1024px) {
-    #cabecalho {
-        @include mixins.flex(row, space-between, center)
-    }
-
-    #id {
-        @include mixins.flex(row, space-between, center)
+    #header_container {
+        @include mixins.espacamento(1% 10%, 0); 
     }
 }
 
 /* Tablet */
 @media screen and (min-width:768px) and (max-width:1023px){
-    #cabecalho {
-        @include mixins.flex(row, space-between, center)
-    }  
+    #header_container {
+        @include mixins.espacamento(0 , 0); 
+    } 
 }
 
 /* Celular */
 @media screen and (max-width:767px) {
-    #cabecalho {
-        @include mixins.flex(row, space-between, center)
-    } 
+    .mobile_show {
+        display: block;
+    }
 
-    #id {
-        @include mixins.flex(column, center, center)
+    .mobile_hide {
+        display: none;
+    }
+
+    #header_container {
+        @include mixins.espacamento(0 , 0); 
+    }
+
+    #logos {
+        @include mixins.flex(row, center, center, 2rem, wrap);
+
+        img:first-child {
+            margin-bottom: 1rem;
+        }
+    }
+
+    #menu {
+        @include mixins.borda-total(transparent, 0);
+        @include mixins.flex(column, center, start, nowrap, 10px);
     }
 }

@@ -10,57 +10,94 @@
   color: rgb(52, 52, 52);
 }
 
-header {
-  border-top: 1px solid none;
-  border-bottom: 1px solid blue;
+.mobile_show {
+  display: none;
 }
 
-.bg_video {
-  position: absolute;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -100;
-  background: url("../imagens/video_bg-img.jpg") no-repeat center;
-  background-size: cover;
+.mobile_hide {
+  display: block;
+}
+
+#header_container {
+  margin: 1rem 15rem;
+  padding: 0;
+}
+
+#logos {
+  margin: 0;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8%;
+}
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  border: 1px solid blue;
+  border-radius: 50px;
+}
+#menu img, #menu svg {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+#menu a {
+  text-decoration: none;
+  color: rgb(52, 52, 52);
 }
 
 /* Desktop */
 @media screen and (min-width: 1024px) {
-  #cabecalho {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  #id {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  #header_container {
+    margin: 1% 10%;
+    padding: 0;
   }
 }
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  #cabecalho {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  #header_container {
+    margin: 0;
+    padding: 0;
   }
 }
 /* Celular */
 @media screen and (max-width: 767px) {
-  #cabecalho {
+  .mobile_show {
+    display: block;
+  }
+  .mobile_hide {
+    display: none;
+  }
+  #header_container {
+    margin: 0;
+    padding: 0;
+  }
+  #logos {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-wrap: 2rem;
+    gap: wrap;
   }
-  #id {
+  #logos img:first-child {
+    margin-bottom: 1rem;
+  }
+  #menu {
+    border: 1px solid transparent;
+    border-radius: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    flex-wrap: nowrap;
+    gap: 10px;
   }
 }/*# sourceMappingURL=style.css.map */
