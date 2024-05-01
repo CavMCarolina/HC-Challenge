@@ -15,8 +15,9 @@
     font-weight: $weight;
 }
 
-@mixin borda-total($cor, $radius) {
-    border: 1px solid $cor;
+@mixin div-config($cor, $borda, $radius) {
+    background-color: $cor;
+    border: 1px solid $borda;
     border-radius: $radius;
 }
 

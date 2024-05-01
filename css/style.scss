@@ -11,12 +11,12 @@
     color: variaveis.$cor_texto;
 }
 
-// Coisas que só aparecerão no mobile
+// Coisas que SÓ aparecerão no mobile
 .mobile_show {
     display: none;
 }
 
-// Coisas que não aparecerão no mobile
+// Coisas que NÃO aparecerão no mobile
 .mobile_hide {
     display: block
 }
@@ -30,28 +30,42 @@
     @include mixins.flex(row, none, center, wrap, 8%);
 }
 
-#menu {
-    @include mixins.flex(row, space-around, center, nowrap, 10px);
-    @include mixins.borda-total(blue, 50px);
+#nav-bar {
+    @include mixins.flex(row, center, center, nowrap, 10px);
+    @include mixins.div-config(variaveis.$cor_principal, variaveis.$cor_secundaria , 50px);
+    @include mixins.espacamento(2rem 0, 7px);
+    @include mixins.size(100%, auto);
 
     img, svg {
         @include mixins.size(1.875rem, 1.875rem);
     }
 
+    button:hover {
+        @include mixins.div-config(variaveis.$cor_escura, transparent, 6px);
+    }
+
     a {
         @include mixins.link(none);
+    }
+
+    .menu li {
+        @include mixins.div-config(variaveis.$cor_secundaria, transparent,  10px);
+        @include mixins.espacamento(5px, 5px);
+        color: white;
+
+        a {
+            color: white;
+        }
+        
+        li, a:hover {
+            @include mixins.div-config(variaveis.$cor_escura, variaveis.$cor_secundaria, 6px);
+        }
     }
 }
 
 // header {
 //     background-color: rgba(13, 169, 220, 1);
 //     @include mixins.borda-y(none, variaveis.$cor_principal);
-// }
-
-// #menu {
-//     background-color: variaveis.$nuvem;
-//     border: 1px solid blue;
-//     border-radius: 100px;
 // }
 
 // main {
@@ -97,8 +111,8 @@
         }
     }
 
-    #menu {
-        @include mixins.borda-total(transparent, 0);
+    #nav-bar {
+        @include mixins.div-config(transparent, transparent, 0);
         @include mixins.flex(column, center, start, nowrap, 10px);
     }
 }
