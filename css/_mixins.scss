@@ -31,13 +31,13 @@
     border-bottom: 1px solid $bottom;
 }
 
-@mixin flex($direction, $justify, $align, $wrap, $gap) {
+@mixin flex($justify, $gap, $direction: row, $align: center, $wrap: nowrap) {
     display: flex;
-    flex-direction: $direction;
     justify-content: $justify;
+    gap: $gap;
+    flex-direction: $direction;
     align-items: $align;
     flex-wrap: $wrap;
-    gap: $gap;
 }
 
 @mixin grid() {

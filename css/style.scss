@@ -22,80 +22,128 @@
 }
 
 #header_container {
-    @include mixins.espacamento(1rem 15rem, 0);
-    @include mixins.flex(row, auto, center, nowrap, 0);
+    @include mixins.flex(auto, 20px, column, start);
 }
 
 #cabecalho {
-    @include mixins.flex(row, start, baseline, nowrap, 20px);
-    @include mixins.espacamento(2rem 0, 0);
+    @include mixins.flex(start, 20px);
 
     img {
-        @include mixins.size(170px, 90px);
+        @include mixins.size(100px, 50px);
     }
 
     h1 {
-        @include mixins.texto(50px, 500);
+        @include mixins.texto(30px, 500);
+        @include mixins.espacamento(0, 0);
     }
 }
 
 #nav-bar {
-    @include mixins.flex(row, end, center, nowrap, 10px);
-    // @include mixins.div-config(variaveis.$cor_principal, variaveis.$cor_secundaria , 50px);
-    // @include mixins.espacamento(2rem 0, 7px);
-    // @include mixins.size(100%, auto);
+    @include mixins.flex(end, 0);
 
     img, svg {
-        @include mixins.size(1.875rem, 1.875rem);
+        @include mixins.size(25px, 25px);
+        margin-right: 5px;
     }
 
-    // button:hover {
-    //     @include mixins.div-config(variaveis.$cor_escura, transparent, 6px);
-    // }
+    button {
+        @include mixins.flex(center, 0);
 
-    a {
-        @include mixins.link(none);
+        &:hover, &:focus {
+            @include mixins.div-config(variaveis.$cinza_hover, transparent, 7px);
+        }
+
+        a {
+            @include mixins.link(none);
+            margin-right: 5px;
+        }
     }
 
-    // .menu li {
-    //     @include mixins.div-config(variaveis.$cor_secundaria, transparent,  10px);
-    //     @include mixins.espacamento(5px, 5px);
-    //     color: white;
-
-    //     a {
-    //         color: white;
-    //     }
-        
-    //     li, a:hover {
-    //         @include mixins.div-config(variaveis.$cor_escura, variaveis.$cor_secundaria, 6px);
-    //     }
-    // }
+    .dropdown-item {
+        &:hover {
+            @include mixins.div-config(variaveis.$cinza_hover, transparent, 0);
+        }
+    }
 }
 
-// header {
-//     background-color: rgba(13, 169, 220, 1);
-//     @include mixins.borda-y(none, variaveis.$cor_principal);
-// }
+// Classe necessária por causa do bootstrap
+.hr-normal {
+    @include mixins.espacamento(0, 0);
+    color: variaveis.$cor_escura;
+    opacity: 1;
+}
 
-// main {
-//     background: url('../imagens/background.jpg') no-repeat center;
-//     position: absolute;
-//     z-index: -100;
-//     width: 100%;
-// }
+// Foto de background
+main img {
+    z-index: -100;
+    position: absolute;
+    width: 100%;
+    min-height: 1000px;
+    object-fit: cover;
+}
+
+.main_container {
+    @include mixins.espacamento(0 11rem, 4rem 0);
+
+    div {
+        @include mixins.flex(none, 100px);
+
+        iframe {
+            width: 700px;
+            height: 400px;
+            @include mixins.div-config(none, transparent, 20px);
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
 
 /* Desktop */
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1300px) {
     #header_container {
-        @include mixins.espacamento(1% 10%, 0); 
+        @include mixins.espacamento(1.3rem 10%, 0);
+        @include mixins.flex(space-between, 0, row, center);
     }
 }
 
-/* Tablet */
-@media screen and (min-width:768px) and (max-width:1023px){
+@media screen and (min-width: 1170px) and (max-width: 1299px) {
     #header_container {
-        @include mixins.espacamento(0 , 0); 
-    } 
+        @include mixins.flex(space-between, 0, row, center);
+        @include mixins.espacamento(1.3rem 7%, 0);
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1169px) {
+    #header_container {
+        @include mixins.flex(space-between, 0, row, center);
+        @include mixins.espacamento(1.3rem 2%, 0);
+    }
+}
+/* Tablet */
+@media screen and (max-width: 1023px) and (min-width: 992px) {
+    #header_container {
+        @include mixins.flex(space-between, 0, row, center);
+        @include mixins.espacamento(1.3rem 1%, 0);
+    }
+}
+
+@media screen and (min-width:768px) and (max-width: 991px){
+    #header_container {
+        @include mixins.espacamento(1.3rem 0, 0);
+        @include mixins.flex(space-between, 0, row, center);
+    }
+
+    // .navbar-expand-lg .navbar-toggler {
+    //     display: none;
+    // }
+
+    // .collapse, .navbar-collapse {
+    //     display: block;
+    // }
 }
 
 /* Celular */
@@ -108,20 +156,8 @@
         display: none;
     }
 
-    #header_container {
-        @include mixins.espacamento(0 , 0); 
-    }
-
-    #logos {
-        @include mixins.flex(row, center, center, 2rem, wrap);
-
-        img:first-child {
-            margin-bottom: 1rem;
-        }
-    }
-
     #nav-bar {
         @include mixins.div-config(transparent, transparent, 0);
-        @include mixins.flex(column, center, start, nowrap, 10px);
+        @include mixins.flex(center, 10px, column, start);
     }
 }
