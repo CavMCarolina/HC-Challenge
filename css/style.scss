@@ -22,45 +22,54 @@
 }
 
 #header_container {
-    @include mixins.espacamento(1rem 15rem, 0); 
+    @include mixins.espacamento(1rem 15rem, 0);
+    @include mixins.flex(row, auto, center, nowrap, 0);
 }
 
-#logos {
-    @include mixins.espacamento(0, 1rem 0);
-    @include mixins.flex(row, none, center, wrap, 8%);
+#cabecalho {
+    @include mixins.flex(row, start, baseline, nowrap, 20px);
+    @include mixins.espacamento(2rem 0, 0);
+
+    img {
+        @include mixins.size(170px, 90px);
+    }
+
+    h1 {
+        @include mixins.texto(50px, 500);
+    }
 }
 
 #nav-bar {
-    @include mixins.flex(row, center, center, nowrap, 10px);
-    @include mixins.div-config(variaveis.$cor_principal, variaveis.$cor_secundaria , 50px);
-    @include mixins.espacamento(2rem 0, 7px);
-    @include mixins.size(100%, auto);
+    @include mixins.flex(row, end, center, nowrap, 10px);
+    // @include mixins.div-config(variaveis.$cor_principal, variaveis.$cor_secundaria , 50px);
+    // @include mixins.espacamento(2rem 0, 7px);
+    // @include mixins.size(100%, auto);
 
     img, svg {
         @include mixins.size(1.875rem, 1.875rem);
     }
 
-    button:hover {
-        @include mixins.div-config(variaveis.$cor_escura, transparent, 6px);
-    }
+    // button:hover {
+    //     @include mixins.div-config(variaveis.$cor_escura, transparent, 6px);
+    // }
 
     a {
         @include mixins.link(none);
     }
 
-    .menu li {
-        @include mixins.div-config(variaveis.$cor_secundaria, transparent,  10px);
-        @include mixins.espacamento(5px, 5px);
-        color: white;
+    // .menu li {
+    //     @include mixins.div-config(variaveis.$cor_secundaria, transparent,  10px);
+    //     @include mixins.espacamento(5px, 5px);
+    //     color: white;
 
-        a {
-            color: white;
-        }
+    //     a {
+    //         color: white;
+    //     }
         
-        li, a:hover {
-            @include mixins.div-config(variaveis.$cor_escura, variaveis.$cor_secundaria, 6px);
-        }
-    }
+    //     li, a:hover {
+    //         @include mixins.div-config(variaveis.$cor_escura, variaveis.$cor_secundaria, 6px);
+    //     }
+    // }
 }
 
 // header {
