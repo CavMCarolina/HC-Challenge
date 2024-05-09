@@ -1,23 +1,32 @@
 import React, { Children } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Agendamentos from './Pages/Agendamento.jsx'
-import EspacoInterativo from './Pages/EspacoInterativo.jsx'
-import Paciente from './Pages/Paciente.jsx'
+import ComoAgendar from './Pages/ComoAgendar.jsx'
+import Cadastro from './Pages/Cadastro.jsx'
 import PageNotFound from './Pages/PageNotFound.jsx'
-import Voluntario from './Pages/Voluntario.jsx'
+import SaibaMais from './Pages/SaibaMais.jsx'
+import Home from './Pages/Home.jsx'
+import NossaEquipe from './Pages/NossaEquipe.jsx'
+import RaioX from './Pages/RaioX.jsx'
+import Sangue from './Pages/Sangue.jsx'
+import Ultrassom from './Pages/Ultrassom.jsx'
+
+
 
 const router = createBrowserRouter([
   {
     path:'/',
     element: <App/>,
     children:[
-      {index:true, element: <EspacoInterativo/>},
-      {path:'agendamentos', element: <Agendamentos/>},
-      {path:'paciente', element: <Paciente/>},
-      {path:'voluntario', element: <Voluntario/>},
+      {index:true, element: <Home/>},
+      {path: 'nossaequipe', element: <NossaEquipe/>},
+      {path:'agendamentos/comoagendar', element: <ComoAgendar/>},
+      {path:'exames/raiox', element: <RaioX/>},
+      {path:'exames/ultrassom', element: <Ultrassom/>},
+      {path:'exames/sangue', element: <Sangue/>},
+      {path:'voluntario/cadastro', element: <Cadastro/>},
+      {path:'voluntario/saibamais', element: <SaibaMais/>},
       {path:'*', element: <PageNotFound/>}
 
     ]

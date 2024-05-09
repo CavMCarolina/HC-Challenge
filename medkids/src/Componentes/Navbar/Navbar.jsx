@@ -1,8 +1,9 @@
-import icr from '../../Imagens/icr.png'
-import agendamentos from '../../Imagens/agendamentos.svg'
-import voluntario from '../../Imagens/voluntario.png'
-import exame from '../../Imagens/exame.png'
-import location from '../../Imagens/location.svg'
+import icr from '../../assets/icr.png'
+import agendamentos from '../../assets/agendamentos.svg'
+import voluntario from '../../assets/voluntario.png'
+import exame from '../../assets/exame.png'
+import location from '../../assets/location.svg'
+import {Link} from 'react-router-dom'
 
 
 export default function Navbar() {
@@ -58,10 +59,10 @@ export default function Navbar() {
                             </button>
                             <ul className="dropdown-menu menu">
                                 <li>
-                                    <a className="dropdown-item" href="#">
+                                    <Link to='agendamentos/comoagendar' className="dropdown-item">
                                         <img src=""/>
                                         <span>Como agendar?</span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
                                     <a className="dropdown-item" href="#">
@@ -80,44 +81,44 @@ export default function Navbar() {
                             </button>
                             <ul className="dropdown-menu menu">
                                 <li>
-                                    <a className="dropdown-item" href="#">
+                                    <Link to='voluntario/saibamais' className="dropdown-item">
                                         <img src=""/>
                                         <span>Saiba Mais</span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a className="dropdown-item" href="#">
+                                    <Link to='voluntario/cadastro' className="dropdown-item">
                                         <img src=""/>
                                         <span>Candidate-se</span>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </li>
                         <li className="nav-item dropdown">
-                            <button className="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                <a href="" id="exame">
+                                <button className="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a href="" id="exame">
                                     <img src={exame} alt="Exames"/>
                                     Exames
                                 </a>
                             </button>
                             <ul className="dropdown-menu menu">
                                 <li>
-                                    <a className="dropdown-item" href="#">
+                                    <Link to='exames/sangue' className="dropdown-item">
                                         <img src=""/>
                                         <span>Exames de Sangue</span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a className="dropdown-item" href="#">
+                                    <Link to='exames/ultrassom' className="dropdown-item">
                                         <img src=""/>
                                         <span>Ultrassom</span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a className="dropdown-item" href="#">
+                                    <Link to='exames/raiox' className="dropdown-item">
                                         <img src=""/>
                                         <span>Raio-X</span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li><hr className="dropdown-divider"/></li>
                                 <li>
@@ -137,16 +138,16 @@ export default function Navbar() {
                             </button>
                             <ul className="dropdown-menu menu">
                                 <li>
-                                    <a className="dropdown-item" href="#">
+                                    <Link to='/' className="dropdown-item">
                                         <img src=""/>
                                         <span>Home</span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a className="dropdown-item" href="#">
+                                    <Link to='nossaequipe' className="dropdown-item">
                                         <img src=""/>
                                         <span>Nossa equipe</span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li><hr className="dropdown-divider"/></li>
                                 <li>
