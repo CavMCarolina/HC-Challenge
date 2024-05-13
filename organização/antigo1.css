@@ -1,0 +1,226 @@
+.wrap {
+    flex-wrap: wrap;
+}
+
+.flex {
+    display: flex;
+}
+
+.espaco {
+    justify-content: space-between;
+}
+
+.space {
+    justify-content: space-around;
+}
+
+.alinhar {
+    align-items: center;
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.center{
+    justify-content: center;
+}
+
+#logo {
+    grid-area: 'logo';
+}
+
+#logo-parceiros{
+    grid-area: 'logo-parceiros';
+}
+
+#pesquisa {
+    border: 1px solid var(--cinza_bordas);
+    border-radius: 4px;
+    padding: .6rem;
+    grid-area: 'pesquisa';
+}
+
+#lupa {
+    background-color: var(--cor_principal);
+    border-radius: 30px;
+    padding: 1rem;
+    border: 1px solid var(--cor_secundaria);
+    grid-area: 'lupa';
+}
+
+#menu {
+    background-color: var(--cor_principal);
+    border: 1px solid var(--cor_secundaria);
+}
+
+#menu a {
+    text-decoration: none;
+    color: black;
+}
+
+#menu a:hover {
+    border-radius: 6px;
+    background-color: var(--cor_escura);
+    padding: 0.3rem 1rem;
+}
+
+#menu div button {
+    background-color: transparent;
+    border: 0;
+    width: 100%;
+}
+
+#menu div:last-child button {
+    border: 0;
+}
+
+#menu div:last-child a {
+    border-radius: 6px;
+    background-color: var(--cor_escura);
+    padding: 0.3rem 1rem;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid var(--cor_secundaria);
+    background-color: var(--cor_principal);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.icones-footer {
+    background-color: white;
+    padding: 0.5rem;
+    border: 1.5px solid var(--cor_secundaria);
+    border-radius: 30px;
+}
+
+.icones-footer:last-child {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+ 
+#ona {
+    width: 6.25rem;
+}
+
+.app {
+    width: 6.875rem;
+    height: 2.0625rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+footer li {
+    padding-top: 0.3125rem;
+    list-style: none;
+    text-align: center;
+}
+
+footer li a{
+    color: black;
+    margin-left: 0.4375rem;
+}
+
+footer li a:hover {
+    color: var(--cor_secundaria);
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    nav {
+        margin: var(--margem_pc);
+    }
+
+    #lupa {
+        margin-left: 1rem;
+        margin-right: 3rem;
+    }    
+    
+    #cabecalho {
+        display: grid;
+        grid-template-areas:
+        "logo logo-parceiros pesquisa lupa";
+        grid-template-columns: auto-fit(minmax(50px, 270px), minmax(50px, 270px), minmax(100px, 300px), 50px);
+    }
+
+    #menu {
+        border-radius: 30px;
+        margin-top: 2rem;
+        padding: 0.5rem;
+    }
+
+    #menu img {
+        width: 1.6875rem;
+        height: 1.6875rem;
+        margin-right: .625rem;
+    }
+    
+    #menu div {
+        width: 20%;
+    }
+
+    #menu div button {
+        border-right: 1px solid var(--cinza_bordas);
+    }
+
+    .menus {
+        position: absolute;
+    }
+    
+    .menus li {
+        list-style: none;
+        padding: 0.3rem;
+        border-radius: 7px;
+        margin-top: 0.3125rem;
+        background-color: rgb(105, 156, 150);
+    }
+
+    #footer-container {
+        padding: 2rem 10rem 0 10rem;
+    }
+    
+    #footer {
+        border-top: 1px solid var(--cinza_bordas);
+        padding: 1.3rem;
+        text-align: center;
+    }
+
+    #footer_info {
+        justify-content: space-around;
+        margin: 2rem 0 0.625rem;
+    }
+
+    footer svg {
+        width: 1.25rem;
+        height: 1.875rem;
+        margin: 0.3125rem;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 767px) {
+    #cabecalho {
+        display: grid;
+        grid-template-areas:
+        "logo"
+        "logo-parceiros";
+        margin: var(--margem_tablet);
+    }
+
+    #menu img {
+        width: 1.6875rem;
+        height: 1.6875rem;
+        margin-right: .625rem;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    
+}
