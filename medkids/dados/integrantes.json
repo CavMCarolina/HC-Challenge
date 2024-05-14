@@ -1,27 +1,27 @@
 [
 {
-    "foto" : "bea.jpg",
+    "foto" : "bea.jpeg",
     "nome" : "Beatriz Silva",
-    "Contato" : ""   
+    "Contato" : "beazinhagameplay@uol.com"   
 }, 
 {
     "foto" : "lina.jpg",
     "nome" : "Carolina Machado",
-    "Contato" : ""   
+    "Contato" : "cvm.carolina@gmail.com"   
 }, 
 {
     "foto" : "edson.jpg",
     "nome" : "Edson Leonardo",
-    "Contato" : ""   
+    "Contato" : "edsonleonardo0708@gmail.com"   
 }, 
 {
-    "foto" : "eduardo.jpg",
+    "foto" : "eduardo.jpeg",
     "nome" : "Eduardo Mazelli",
-    "Contato" : ""   
+    "Contato" : "eduardo.mazelli@gmail.com"   
 }, 
 {
-    "foto" : "nathan.jpg",
+    "foto" : "nathan.jpeg",
     "nome" : "Nathan Uflacker",
-    "Contato" : ""   
+    "Contato" : "nathanuflacker@hotmail.com"   
 }
 ]
