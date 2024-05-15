@@ -1,27 +1,32 @@
 [
-{
-    "foto" : "bea.jpg",
-    "nome" : "Beatriz Silva",
-    "Contato" : ""   
-}, 
-{
-    "foto" : "lina.jpg",
-    "nome" : "Carolina Machado",
-    "Contato" : ""   
-}, 
-{
-    "foto" : "edson.jpg",
-    "nome" : "Edson Leonardo",
-    "Contato" : ""   
-}, 
-{
-    "foto" : "eduardo.jpg",
-    "nome" : "Eduardo Mazelli",
-    "Contato" : ""   
-}, 
-{
-    "foto" : "nathan.jpg",
-    "nome" : "Nathan Uflacker",
-    "Contato" : ""   
-}
-]
+    {
+        "foto" : "bea.jpeg",
+        "nome" : "Beatriz Silva",
+        "email" : "beazinhagameplay@uol.com",
+        "telefone": "(11) 9 6613-9243"  
+    }, 
+    {
+        "foto" : "lina.jpg",
+        "nome" : "Carolina Machado",
+        "email" : "cavm.carolina@gmail.com",
+        "telefone": "(11) 9 9632-9582"   
+    }, 
+    {
+        "foto" : "edson.jpg",
+        "nome" : "Edson Leonardo",
+        "email" : "edsonleonardo0708@gmail.com",
+        "telefone": "(11) 9 5990-0026" 
+    }, 
+    {
+        "foto" : "eduardo.jpeg",
+        "nome" : "Eduardo Mazelli",
+        "email" : "eduardo.mazelli@gmail.com",
+        "telefone": "(11) 9 7649-4397"  
+    }, 
+    {
+        "foto" : "nathan.jpeg",
+        "nome" : "Nathan Uflacker",
+        "email" : "nathanuflacker@hotmail.com",
+        "telefone": "(11) 9 6302-4160"    
+    }
+    ]

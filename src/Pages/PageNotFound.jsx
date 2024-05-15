@@ -1,7 +1,9 @@
+import bg from "../assets/404.png"
+
 export default function PageNotFound() {
     return (
-        <>
-            <h1>404 Página não encontrada</h1>
-        </>
+        <div className="page_not_found">
+            <img src={bg}/>
+        </div>
     )
 }

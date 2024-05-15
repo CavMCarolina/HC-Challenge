@@ -43,7 +43,11 @@
 
     img, svg {
         @include mixins.size(25px, 25px);
-        margin-right: 5px;
+        margin-right: 7px;
+    }
+
+    #logo {
+        @include mixins.size(45px, 25px);
     }
 
     button {
@@ -83,26 +87,49 @@ main img {
 }
 
 .main_container {
-    @include mixins.espacamento(0 11rem, 4rem 0);
+    @include mixins.espacamento(0 11rem, 6rem 0);
 
-    div {
+    .home {
         @include mixins.flex(none, 100px);
 
-        iframe {
-            width: 700px;
-            height: 400px;
+        #video_home {
             @include mixins.div-config(none, transparent, 20px);
-            margin-bottom: 2rem;
+            @include mixins.size(70%, 31rem);
+        }
+
+        p {
+            @include mixins.size(50%, auto);
+            @include mixins.div-config (rgba(255, 255, 255, 0.47), black, 10px);
+            @include mixins.espacamento(0, 1rem 2rem);
         }
     }
 }
 
-footer {
+.video {
+    @include mixins.size(100%, 50rem);
+    @include mixins.div-config(none, transparent, 20px);
+    @include mixins.espacamento(2rem 0, 0);
+}
 
+.page_not_found {
+    @include mixins.size(100%, 100%);
+    background-color: #2E1B3B;
+    text-align: center;
+
+    img {
+        max-width: 1000px;
+        vertical-align: middle;
+    }
+}
+
+.container {
+    background-color: transparent;
+}
+
+footer {
     svg {
         z-index: -100;
         width: 100%;
-        position: absolute;
     }
 }
 
@@ -140,14 +167,6 @@ footer {
         @include mixins.espacamento(1.3rem 0, 0);
         @include mixins.flex(space-between, 0, row, center);
     }
-
-    // .navbar-expand-lg .navbar-toggler {
-    //     display: none;
-    // }
-
-    // .collapse, .navbar-collapse {
-    //     display: block;
-    // }
 }
 
 /* Celular */
