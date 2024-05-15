@@ -78,7 +78,7 @@
 }
 
 // Foto de background
-main img {
+.bg {
     z-index: -100;
     position: absolute;
     width: 100%;
@@ -87,7 +87,7 @@ main img {
 }
 
 .main_container {
-    @include mixins.espacamento(0 11rem, 6rem 0);
+    @include mixins.espacamento(0 11rem, 5rem 0);
 
     .home {
         @include mixins.flex(none, 100px);
@@ -122,8 +122,16 @@ main img {
     }
 }
 
-.container {
-    background-color: transparent;
+.lista-integrantes {
+    @include mixins.espacamento(3rem 0, 0);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .foto_integrante {
+        @include mixins.size(21.875rem, 21.875rem);
+        @include mixins.div-config(none, variaveis.$cor_escura, 20px);
+        object-fit: cover;
+    }
 }
 
 footer {

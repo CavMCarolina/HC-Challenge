@@ -6,7 +6,7 @@ export default function Main() {
         <>
             <main>
                 <hr className="hr-normal"/>
-                <img src={bg} alt="Foto de fundo"/>
+                <img src={bg} alt="Foto de fundo" className="bg"/>
                 <div className="main_container">
                     <div className="home">
                         <iframe id="video_home" src="https://www.youtube.com/embed/dfaM_jT1LkQ?si=88rT5f0Vo1VTrZ0u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
@@ -18,7 +18,7 @@ export default function Main() {
                             Além de contar com as informações que já existiam no site, nossa equipe utilizou tecnologias mais atuais para criar o Espaço Interativo. Por meio dele, nosso site oferece acesso prático a informações relevantes sobre o hospital, seus serviços e os procedimentos realizados de uma forma mais visual, quebrando a barreira do analfabetismo ou de outras limitações pessoais.
                         </p>
                     </div>
-                    {/* <div>
+                    <div>
                         <div>
                             <h1>Sumário:</h1>
                             <ul>
@@ -32,31 +32,31 @@ export default function Main() {
                             <h2>Exames</h2>
                             <div>
                                 <img src=""/>
-                                <p>TESTE</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste aliquam dolor quam alias eligendi laborum soluta culpa! Quae officia veritatis veniam quia quibusdam repellat doloribus iusto, incidunt ut. Accusantium, impedit?</p>
                             </div>
                         </section>
                         <section id="agendamentos">
                             <h2>Agendamentos</h2>
                             <div>
                                 <img src=""/>
-                                <p>TESTE</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste aliquam dolor quam alias eligendi laborum soluta culpa! Quae officia veritatis veniam quia quibusdam repellat doloribus iusto, incidunt ut. Accusantium, impedit?</p>
                             </div>
                         </section>
                         <section id="voluntarios">
                             <h2>Voluntários</h2>
                             <div>
                                 <img src=""/>
-                                <p>TESTE</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste aliquam dolor quam alias eligendi laborum soluta culpa! Quae officia veritatis veniam quia quibusdam repellat doloribus iusto, incidunt ut. Accusantium, impedit?</p>
                             </div>
                         </section>
                         <section id="icr">
                             <h2>ICr</h2>
                             <div>
                                 <img src=""/>
-                                <p>TESTE</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste aliquam dolor quam alias eligendi laborum soluta culpa! Quae officia veritatis veniam quia quibusdam repellat doloribus iusto, incidunt ut. Accusantium, impedit?</p>
                             </div>
                         </section>
-                    </div> */}
+                    </div>
                 </div>
             </main>
             <Footer/>

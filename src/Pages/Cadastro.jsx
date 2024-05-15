@@ -5,7 +5,7 @@ export default function Cadastro() {
         <body>
             <main>
                 <hr className="hr-normal"/>
-                <img src={bg} alt="Foto de fundo"/>
+                <img src={bg} alt="Foto de fundo" className="bg"/>
                 <div className="container">
                     <div className="text-center py-3">
                         <h1 className="fs-1">Torne-se um Voluntário!</h1>
