@@ -1,4 +1,4 @@
-import icr from '../../assets/icr.png'
+import icr_preto from '../../assets/icr_preto.png'
 import medkids from '../../assets/logo_reduzido-MedKids.png'
 import agendamentos from '../../assets/agenda.png'
 import voluntario from '../../assets/voluntario.png'
@@ -30,7 +30,7 @@ export default function Navbar() {
                         <li className="nav-item dropdown">
                             <button className="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                 <a href="https://icr.usp.br/">
-                                    <img src={icr} alt="ICr"/>
+                                    <img src={icr_preto} alt="ICr"/>
                                     <span>ICr</span>
                                 </a>
                             </button>

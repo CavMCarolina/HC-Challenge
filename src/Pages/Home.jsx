@@ -18,7 +18,7 @@ export default function Main() {
                             Além de contar com as informações que já existiam no site, nossa equipe utilizou tecnologias mais atuais para criar o Espaço Interativo. Por meio dele, nosso site oferece acesso prático a informações relevantes sobre o hospital, seus serviços e os procedimentos realizados de uma forma mais visual, quebrando a barreira do analfabetismo ou de outras limitações pessoais.
                         </p>
                     </div>
-                    <div>
+                    {/* <div>
                         <div>
                             <h1>Sumário:</h1>
                             <ul>
@@ -56,7 +56,7 @@ export default function Main() {
                                 <p>TESTE</p>
                             </div>
                         </section>
-                    </div>
+                    </div> */}
                 </div>
             </main>
             <Footer/>
