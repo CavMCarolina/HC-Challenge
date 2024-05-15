@@ -1,4 +1,148 @@
+import React from "react";
+
 export default function Cadastro() {
+    const [nome, setNome] = React.useState('');
+    const [sobrenome, setSobrenome] = React.useState('');
+    const [email, setEmail] = React.useState('');
+    const [telefone, setTelefone] = React.useState('');
+    const [preferencia, setPreferencia] = React.useState('');
+    const [cep, setCep] = React.useState('');
+    const [endereco, setEndereco] = React.useState('');
+    const [numero, setNumero] = React.useState('');
+    const [pais, setPais] = React.useState('');
+    const [estado, setEstado] = React.useState('');
+    const [cidade, setCidade] = React.useState('');
+    const [mensagem, setMensagem] = React.useState('');
+    const [tocar , setTocar] = React.useState('');
+    const [instrumentos, setInstrumentos] = React.useState('');
+    const [piadas, setPiadas] = React.useState('');
+    const [fantasia, setFantasia] = React.useState('');
+    const [palhaco, setPalhaco] = React.useState('');
+    const [termos, setTermos] = React.useState('');
+    const [call, setCall] = React.useState('');
+
+    const onChangeN = event => {
+        localStorage.setItem('nome', event.target.value);
+        
+        setNome(event.target.value);
+    }
+
+    const onChangeS = event => {
+        localStorage.setItem('sobrenome', event.target.value);
+        
+        setSobrenome(event.target.value);
+    }
+
+    const onChangeE = event => {
+        localStorage.setItem('email', event.target.value);
+        
+        setEmail(event.target.value);
+    }
+
+    const onChangeT = event => {
+        localStorage.setItem('telefone', event.target.value);
+        
+        setTelefone(event.target.value);
+    }
+
+    const onChangeP = event => {
+        localStorage.setItem('preferencia', event.target.value);
+        
+        setPreferencia(event.target.value);
+    }
+
+    const onChangeC = event => {
+        localStorage.setItem('cep', event.target.value);
+        
+        setCep(event.target.value);
+    }
+
+    const onChangeEn = event => {
+        localStorage.setItem('endereco', event.target.value);
+        
+        setEndereco(event.target.value);
+    }
+
+    const onChangeNu = event => {
+        localStorage.setItem('numero', event.target.value);
+        
+        setNumero(event.target.value);
+    }
+
+    const onChangePa = event => {
+        localStorage.setItem('pais', event.target.value);
+        
+        setPais(event.target.value);
+    }
+
+    const onChangeEs = event => {
+        localStorage.setItem('estado', event.target.value);
+        
+        setEstado(event.target.value);
+    }
+
+    const onChangeCi = event => {
+        localStorage.setItem('cidade', event.target.value);
+        
+        setCidade(event.target.value);
+    }
+
+    const onChangeM = event => {
+        localStorage.setItem('mensagem', event.target.value);
+        
+        setMensagem(event.target.value);
+    }
+
+    const onChangeTo = event => {
+        localStorage.setItem('tocar', event.target.value);
+        
+        setTocar(event.target.value);
+    }
+
+    const onChangeI = event => {
+        localStorage.setItem('instrumentos', event.target.value);
+        
+        setInstrumentos(event.target.value);
+    }
+
+    const onChangePi = event => {
+        localStorage.setItem('piadas', event.target.value);
+        
+        setPiadas(event.target.value);
+    }
+
+    const onChangeF = event => {
+        localStorage.setItem('fantasia', event.target.value);
+        
+        setFantasia(event.target.value);
+    }
+
+    const onChangePal = event => {
+        localStorage.setItem('palhaco', event.target.value);
+        
+        setPalhaco(event.target.value);
+    }
+
+    const onChangeTe = event => {
+        localStorage.setItem('termos', event.target.value);
+        
+        setTermos(event.target.value);
+    }
+
+    const onChangeCa = event => {
+        localStorage.setItem('call', event.target.value);
+        
+        setCall(event.target.value);
+    }
+
+
+    function submit(event) {
+        event.preventDefault();
+
+        console.log(`nome: ${localStorage.getItem('nome')}, sobrenome: ${localStorage.getItem('sobrenome')}, email: ${localStorage.getItem('email')}, telefone: ${localStorage.getItem('telefone')}, prefencia: ${localStorage.getItem('preferencia')}, cep: ${localStorage.getItem('cep')}, endereco: ${localStorage.getItem('endereco')}, numero: ${localStorage.getItem('numero')}, pais: ${localStorage.getItem('pais')}, estado: ${localStorage.getItem('estado')}, cidade: ${localStorage.getItem('cidade')} mensagem: ${localStorage.getItem('mensagem')}`, `tocar: ${localStorage.getItem('tocar')}, instrumentos: ${localStorage.getItem('instrumentos')}, piadas: ${localStorage.getItem('piadas')}, fantasia: ${localStorage.getItem('fantasia')}, palhaco: ${localStorage.getItem('palhaco')}, termos: ${localStorage.getItem('termos')}, contactado: ${localStorage.getItem('call')}`);
+    }
+
+
     return (
         <body>
             <div className="container">
@@ -15,25 +159,25 @@ export default function Cadastro() {
                             <div className="row">
                                 <div className="col-md-6 mb-3"> 
                                     <label htmlFor="nome" className="form-label">Nome</label>
-                                    <input type="text" id="nome" className="form-control" placeholder="Ex: João" required/>
+                                    <input value={nome} onChange={onChangeN} type="text" id="nome" className="form-control" placeholder="Ex: João" required/>
                                 </div>
                                 <div className="col-md-6 mb-3">
                                     <label htmlFor="sobrenome" className="form-label">Sobrenome</label>
-                                    <input type="text" id="sobrenome" className="form-control" placeholder="Ex: Oliveira" required/>
+                                    <input value={sobrenome} onChange={onChangeS} type="text" id="sobrenome" className="form-control" placeholder="Ex: Oliveira" required/>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-md-5 mb-4">
                                     <label htmlFor="email">Email</label>
-                                    <input type="email" id="email" className="form-control" placeholder="nome@hotmail.com" required/>
+                                    <input value={email} onChange={onChangeE} type="email" id="email" className="form-control" placeholder="nome@hotmail.com" required/>
                                 </div>
                                 <div className="col-md-4 mb-3">
                                     <label htmlFor="tel">Telefone:</label>
-                                    <input type="tel" id="tel" className="form-control" placeholder="(DDD) 94002-8922" required/>
+                                    <input value={telefone} onChange={onChangeT} type="tel" id="tel" className="form-control" placeholder="(DDD) 94002-8922" required/>
                                 </div>
                                 <div className="col-md-3 mb-3">
-                                    <label htmlFor="tel">Pref. de Contato:</label>
-                                    <select type="tel" id="tel" className="form-select" required>
+                                    <label htmlFor="preferencia">Pref. de Contato:</label>
+                                    <select value={preferencia} onChange={onChangeP} name="preferencia" id="preferencia" className="form-select" required>
                                         <option value="">Escolha...</option>
                                         <option value="tel">Telefone</option>
                                         <option value="email">Email</option>
@@ -43,25 +187,25 @@ export default function Cadastro() {
                             <div className="row">
                                 <div className="col-md-3 mb-3">
                                     <label htmlFor="cep" className="form-label">CEP</label>
-                                    <input type="text" id="cep" className="form-control" placeholder="Ex: 12345-678" required/>
+                                    <input value={cep} onChange={onChangeC} type="text" id="cep" className="form-control" placeholder="Ex: 12345-678" required/>
                                 </div>
                                 <div className="col-md-7 mb-3">
                                     <label htmlFor="endereco" className="form-label">Endereço</label>
-                                    <input type="text" id="endereco" className="form-control" placeholder="Ex: Rua Abilio Soares" required/>
+                                    <input value={endereco} onChange={onChangeEn} type="text" id="endereco" className="form-control" placeholder="Ex: Rua Abilio Soares" required/>
                                 </div>
                                 <div className="col-md-2 mb-3">
                                     <label htmlFor="numero" className="form-label">Número</label>
-                                    <input type="text" id="numero" className="form-control" placeholder="Ex: 52" required/>
+                                    <input value={numero} onChange={onChangeNu} type="text" id="numero" className="form-control" placeholder="Ex: 52" required/>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-md-4 mb-3">
                                     <label htmlFor="país" className="form-label">País</label>
-                                    <input type="text" id="país" className="form-control" placeholder="Ex: Brasil" required/>
+                                    <input value={pais} onChange={onChangePa} type="text" id="país" className="form-control" placeholder="Ex: Brasil" required/>
                                 </div>
                                 <div className="col-md-4 mb-3">
                                     <label htmlFor="Estado" className="form-label">Estado</label>
-                                    <select name="Estado" id="Estado" className="form-select" required>
+                                    <select value={estado} onChange={onChangeEs} name="Estado" id="Estado" className="form-select" required>
                                         <option value="">Escolha...</option>
                                         <option value="ac">Acre</option>
                                         <option value="al">Alagoas</option>
@@ -94,7 +238,7 @@ export default function Cadastro() {
                                 </div>
                                 <div className="col-md-4 mb-3">
                                     <label htmlFor="cidade" className="form-label">Cidade</label>
-                                    <input type="text" id="cidade" className="form-control" required />
+                                    <input value={cidade} onChange={onChangeCi} type="text" id="cidade" className="form-control" required />
                                 </div>
                             </div>
                             <hr className="my-4"/>
@@ -105,53 +249,57 @@ export default function Cadastro() {
                                     Por que você deseja trabalhar conosco?
                                     <span className="text-muted">(Obrigatório)</span>
                                     </label>
-                                    <textarea name="comentario" id="comentario" rows="3" className="form-control" maxLength="200" required ></textarea>
+                                    <textarea value={mensagem} onChange={onChangeM} name="comentario" id="comentario" rows="3" className="form-control" maxLength="200" required ></textarea>
                                 </div>
                                 <div className="col-md-6 mb-3">
-                                    <p>Você toca algum instrumento?</p>
-                                    <input type="checkbox" className="form-check-input" value="positivo" id="positivoI" required/>
-                                    <label htmlFor="positivoI" className="me-5">Sim</label>
-                                    <input type="checkbox" className="form-check-input" value="negativo" id="negativoI" required/>
-                                    <label htmlFor="negativoI">Não</label>
+                                    <label htmlFor="tocar">Você toca algum instrumento?</label>
+                                    <select value={tocar} onChange={onChangeTo} name="tocar" id="tocar" className="form-select" required>
+                                        <option value="">Escolha...</option>
+                                        <option value="sim">Sim</option>
+                                        <option value="não">Não</option>
+                                    </select>
                                 </div>
                                 <div className="col-md-6 mb-3">
                                     <label htmlFor="instrumentos">Se sim, quais?</label>
-                                    <textarea name="instrumentos" id="instrumentos" rows="1" className="form-control" maxLength="200" required ></textarea>
+                                    <textarea value={instrumentos} onChange={onChangeI} name="instrumentos" id="instrumentos" rows="1" className="form-control" maxLength="200" required ></textarea>
                                 </div>
                                 <div className="col-md-4">
-                                    <p>Gosta de contar piadas?</p>
-                                    <input type="checkbox" className="form-check-input" value="positivo" id="positivoP" required/>
-                                    <label htmlFor="positivoP" className="me-5">Sim</label>
-                                    <input type="checkbox" className="form-check-input" value="negativo" id="negativoP" required/>
-                                    <label htmlFor="negativoP">Não</label>
+                                    <label htmlFor="piadas">Gosta de contar piadas?</label>
+                                    <select value={piadas} onChange={onChangePi} name="piadas" id="piadas" className="form-select" required>
+                                        <option value="">Escolha...</option>
+                                        <option value="sim">Sim</option>
+                                        <option value="não">Não</option>
+                                    </select>
                                 </div>
                                 <div className="col-md-4">
-                                    <p>Aceitaria se fantasiar?</p>
-                                    <input type="checkbox" className="form-check-input" value="positivo" id="positivoF" required/>
-                                    <label htmlFor="positivoF" className="me-5">Sim</label>
-                                    <input type="checkbox" className="form-check-input" value="negativo" id="negativoF" required/>
-                                    <label htmlFor="negativoF">Não</label>
+                                    <label htmlFor="fantasia">Aceitaria se fantasiar?</label>
+                                    <select value={fantasia} onChange={onChangeF} name="fantasia" id="fantasia" className="form-select" required>
+                                        <option value="">Escolha...</option>
+                                        <option value="sim">Sim</option>
+                                        <option value="não">Não</option>
+                                    </select>
                                 </div>
                                 <div className="col-md-4">
-                                    <p>Aceitaria se vestir de palhaço?</p>
-                                    <input type="checkbox" className="form-check-input" value="positivo" id="positivoPa" required/>
-                                    <label htmlFor="positivoPa" className="me-5">Sim</label>
-                                    <input type="checkbox" className="form-check-input" value="negativo" id="negativoPa" required/>
-                                    <label htmlFor="negativoPa">Não</label>
+                                    <label htmlFor="palhaco">Aceitaria se vestir de palhaço?</label>
+                                    <select value={palhaco} onChange={onChangePal} name="palhaco" id="palhaco" className="form-select" required>
+                                        <option value="">Escolha...</option>
+                                        <option value="sim">Sim</option>
+                                        <option value="não">Não</option>
+                                    </select>
                                 </div>
                             </div>
                             <hr className="my-4"/>
                             <div className="form-check">
-                                <input type="checkbox" className="form-check-input" value="doacaoAlma" id="alma" required/>
-                                <label htmlFor="alma">Aceito os termos e politicas do Hospital das Clínicas<a href=""></a></label>
+                                <input value={termos} onChange={onChangeTe} type="checkbox" className="form-check-input" id="termos" required/>
+                                <label htmlFor="termos">Aceito os termos e politicas do Hospital das Clínicas<a href=""></a></label>
                             </div>
                             <br/>
                             <div className="form-check">
-                                <input type="checkbox" className="form-check-input" value="doacaoAlma" id="call" required/>
+                                <input value={call} onChange={onChangeCa} type="checkbox" className="form-check-input" id="call" required/>
                                 <label htmlFor="call">Aceito ser contatado pelo Hospital das Clinicas<a href=""></a></label>
                             </div>
                             <hr className="my-4"/>
-                            <button type="submit" className="btn btn-outline-primary w-100">Finalizar</button>
+                            <button onClick={submit} type="submit" className="btn btn-outline-primary w-100">Finalizar</button>
                         </form>
                     </div>
                 </div>
