@@ -1,6 +1,6 @@
-import icr_preto from '../../assets/icr_preto.png'
+import icr from '../../assets/icr.png'
 import medkids from '../../assets/logo_reduzido-MedKids.png'
-import agendamentos from '../../assets/agenda.png'
+import agendamentos from '../../assets/agendamento.png'
 import voluntario from '../../assets/voluntario.png'
 import exame from '../../assets/exame.png'
 import home from '../../assets/home.png'
@@ -13,7 +13,7 @@ import ultrassom from '../../assets/ultrassom.png'
 import raiox from '../../assets/raiox.png'
 import coleta from '../../assets/coleta.png'
 import como from '../../assets/ponto-de-interrogacao.png'
-import meus_agendamentos from '../../assets/agenda (1).png'
+import meus_agendamentos from '../../assets/meus_agendamentos.png'
 import equipe from '../../assets/equipe.png'
 import {Link} from 'react-router-dom'
 
@@ -30,7 +30,7 @@ export default function Navbar() {
                         <li className="nav-item dropdown">
                             <button className="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                 <a href="https://icr.usp.br/">
-                                    <img src={icr_preto} alt="ICr"/>
+                                    <img src={icr} alt="ICr"/>
                                     <span>ICr</span>
                                 </a>
                             </button>

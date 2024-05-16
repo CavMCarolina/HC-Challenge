@@ -42,7 +42,7 @@
     @include mixins.flex(end, 0);
 
     img, svg {
-        @include mixins.size(25px, 25px);
+        @include mixins.size(1.875rem, 1.875rem);
         margin-right: 7px;
     }
 
@@ -131,6 +131,11 @@
         @include mixins.size(21.875rem, 21.875rem);
         @include mixins.div-config(none, variaveis.$cor_escura, 20px);
         object-fit: cover;
+    }
+
+    .icone {
+        @include mixins.size(25px, 25px);
+        margin-right: 5px;
     }
 }
 
