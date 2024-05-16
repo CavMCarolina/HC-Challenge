@@ -1,50 +1,50 @@
-@use 'variaveis';
+@use "variaveis";
 
 @mixin size($w, $h) {
-    width: $w;
-    height: $h;
+  width: $w;
+  height: $h;
 }
 
 @mixin espacamento($m, $p) {
-    margin: $m;
-    padding: $p;
+  margin: $m;
+  padding: $p;
 }
 
 @mixin texto($size, $weight) {
-    font-size: $size;
-    font-weight: $weight;
+  font-size: $size;
+  font-weight: $weight;
 }
 
 @mixin div-config($cor, $borda, $radius) {
-    background-color: $cor;
-    border: 1px solid $borda;
-    border-radius: $radius;
+  background-color: $cor;
+  border: 1px solid $borda;
+  border-radius: $radius;
 }
 
 @mixin borda-x($direita, $esquerda) {
-    border-right: 1px solid $direita;
-    border-left: 1px solid $esquerda;
+  border-right: 1px solid $direita;
+  border-left: 1px solid $esquerda;
 }
 
 @mixin borda-y($top, $bottom) {
-    border-top: 1px solid $top;
-    border-bottom: 1px solid $bottom;
+  border-top: 1px solid $top;
+  border-bottom: 1px solid $bottom;
 }
 
 @mixin flex($justify, $gap, $direction: row, $align: center, $wrap: nowrap) {
-    display: flex;
-    justify-content: $justify;
-    gap: $gap;
-    flex-direction: $direction;
-    align-items: $align;
-    flex-wrap: $wrap;
+  display: flex;
+  justify-content: $justify;
+  gap: $gap;
+  flex-direction: $direction;
+  align-items: $align;
+  flex-wrap: $wrap;
 }
 
 @mixin grid() {
-    display: grid;
+  display: grid;
 }
 
 @mixin link($decoration) {
-    text-decoration: $decoration;
-    color: variaveis.$cor_texto;
+  text-decoration: $decoration;
+  color: variaveis.$cor_texto;
 }

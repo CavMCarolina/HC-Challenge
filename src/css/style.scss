@@ -1,199 +1,210 @@
-@use 'mixins';
-@use 'variaveis';
+@use "mixins";
+@use "variaveis";
 
 /* Estilizações Gerais */
-@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&family=Biryani:wght@200;300;400;600;700;800;900&family=Imprima&family=Manjari:wght@100;400;700&family=Metrophobic&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&family=Biryani:wght@200;300;400;600;700;800;900&family=Imprima&family=Manjari:wght@100;400;700&family=Metrophobic&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
-    @include mixins.espacamento(0, 0);
-    @include mixins.texto(variaveis.$pequeno, 400);
-    font-family: "Metrophobic", sans-serif;
-    color: variaveis.$cor_texto;
+  @include mixins.espacamento(0, 0);
+  @include mixins.texto(variaveis.$pequeno, 400);
+  font-family: "Metrophobic", sans-serif;
+  color: variaveis.$cor_texto;
 }
 
 // Coisas que SÓ aparecerão no mobile
 .mobile_show {
-    display: none;
+  display: none;
 }
 
 // Coisas que NÃO aparecerão no mobile
 .mobile_hide {
-    display: block
+  display: block;
 }
 
 #header_container {
-    @include mixins.flex(auto, 20px, column, start);
+  @include mixins.flex(auto, 20px, column, start);
 }
 
 #cabecalho {
-    @include mixins.flex(start, 20px);
+  @include mixins.flex(start, 20px);
 
-    img {
-        @include mixins.size(100px, 50px);
-    }
+  img {
+    @include mixins.size(100px, 50px);
+  }
 
-    h1 {
-        @include mixins.texto(30px, 500);
-        @include mixins.espacamento(0, 0);
-    }
+  h1 {
+    @include mixins.texto(30px, 500);
+    @include mixins.espacamento(0, 0);
+  }
 }
 
 #nav-bar {
-    @include mixins.flex(end, 0);
+  @include mixins.flex(end, 0);
 
-    img, svg {
-        @include mixins.size(1.875rem, 1.875rem);
-        margin-right: 7px;
+  img,
+  svg {
+    @include mixins.size(1.875rem, 1.875rem);
+    margin-right: 7px;
+  }
+
+  #logo {
+    @include mixins.size(45px, 25px);
+  }
+
+  button {
+    @include mixins.flex(center, 0);
+
+    &:hover,
+    &:focus {
+      @include mixins.div-config(variaveis.$cinza_hover, transparent, 7px);
     }
 
-    #logo {
-        @include mixins.size(45px, 25px);
+    a {
+      @include mixins.link(none);
+      margin-right: 5px;
     }
+  }
 
-    button {
-        @include mixins.flex(center, 0);
-
-        &:hover, &:focus {
-            @include mixins.div-config(variaveis.$cinza_hover, transparent, 7px);
-        }
-
-        a {
-            @include mixins.link(none);
-            margin-right: 5px;
-        }
+  .dropdown-item {
+    &:hover {
+      @include mixins.div-config(variaveis.$cinza_hover, transparent, 0);
     }
-
-    .dropdown-item {
-        &:hover {
-            @include mixins.div-config(variaveis.$cinza_hover, transparent, 0);
-        }
-    }
+  }
 }
 
 // Classe necessária por causa do bootstrap
 .hr-normal {
-    @include mixins.espacamento(0, 0);
-    color: variaveis.$cor_escura;
-    opacity: 1;
+  @include mixins.espacamento(0, 0);
+  color: variaveis.$cor_escura;
+  opacity: 1;
 }
 
 // Foto de background
 .bg {
-    z-index: -100;
-    position: absolute;
-    width: 100%;
-    min-height: 1000px;
-    object-fit: cover;
+  z-index: -100;
+  position: absolute;
+  width: 100%;
+  min-height: 1000px;
+  object-fit: cover;
 }
 
 .main_container {
-    @include mixins.espacamento(0 11rem, 5rem 0);
+  @include mixins.espacamento(0 11rem, 5rem 0);
 
-    .home {
-        @include mixins.flex(none, 100px);
+  .home {
+    @include mixins.flex(none, 100px);
 
-        #video_home {
-            @include mixins.div-config(none, transparent, 20px);
-            @include mixins.size(70%, 31rem);
-        }
-
-        p {
-            @include mixins.size(50%, auto);
-            @include mixins.div-config (rgba(255, 255, 255, 0.47), black, 10px);
-            @include mixins.espacamento(0, 1rem 2rem);
-        }
+    #video_home {
+      @include mixins.div-config(none, transparent, 20px);
+      @include mixins.size(70%, 31rem);
     }
+
+    p {
+      @include mixins.size(50%, auto);
+      @include mixins.div-config(rgba(255, 255, 255, 0.47), black, 10px);
+      @include mixins.espacamento(0, 1rem 2rem);
+    }
+  }
 }
 
 .video {
-    @include mixins.size(100%, 50rem);
-    @include mixins.div-config(none, transparent, 20px);
-    @include mixins.espacamento(2rem 0, 0);
+  @include mixins.size(100%, 50rem);
+  @include mixins.div-config(none, transparent, 20px);
+  @include mixins.espacamento(2rem 0, 0);
 }
 
 .page_not_found {
-    @include mixins.size(100%, 100%);
-    background-color: #2E1B3B;
-    text-align: center;
+  @include mixins.size(100%, 100%);
+  background-color: #2e1b3b;
+  text-align: center;
 
-    img {
-        max-width: 1000px;
-        vertical-align: middle;
-    }
+  img {
+    max-width: 1000px;
+    vertical-align: middle;
+  }
 }
 
 .lista-integrantes {
-    @include mixins.espacamento(3rem 0, 0);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  @include mixins.espacamento(3rem 0, 0);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-    .foto_integrante {
-        @include mixins.size(21.875rem, 21.875rem);
-        @include mixins.div-config(none, variaveis.$cor_escura, 20px);
-        object-fit: cover;
-    }
+  .foto_integrante {
+    @include mixins.size(21.875rem, 21.875rem);
+    @include mixins.div-config(none, variaveis.$cor_escura, 20px);
+    object-fit: cover;
+  }
 
-    .icone {
-        @include mixins.size(25px, 25px);
-        margin-right: 5px;
-    }
+  .icone {
+    @include mixins.size(25px, 25px);
+    margin-right: 5px;
+  }
+
+  a {
+    @include mixins.link(underline);
+  }
 }
 
 footer {
-    svg {
-        z-index: -100;
-        width: 100%;
-    }
+  svg {
+    z-index: -100;
+    width: 100%;
+    position: absolute;
+  }
+
+  .footer_container {
+    @include mixins.espacamento(10rem 0, 0);
+  }
 }
 
 /* Desktop */
-@media screen and (min-width:1300px) {
-    #header_container {
-        @include mixins.espacamento(1.3rem 10%, 0);
-        @include mixins.flex(space-between, 0, row, center);
-    }
+@media screen and (min-width: 1300px) {
+  #header_container {
+    @include mixins.espacamento(1.3rem 10%, 0);
+    @include mixins.flex(space-between, 0, row, center);
+  }
 }
 
 @media screen and (min-width: 1170px) and (max-width: 1299px) {
-    #header_container {
-        @include mixins.flex(space-between, 0, row, center);
-        @include mixins.espacamento(1.3rem 7%, 0);
-    }
+  #header_container {
+    @include mixins.flex(space-between, 0, row, center);
+    @include mixins.espacamento(1.3rem 7%, 0);
+  }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1169px) {
-    #header_container {
-        @include mixins.flex(space-between, 0, row, center);
-        @include mixins.espacamento(1.3rem 2%, 0);
-    }
+  #header_container {
+    @include mixins.flex(space-between, 0, row, center);
+    @include mixins.espacamento(1.3rem 2%, 0);
+  }
 }
 /* Tablet */
 @media screen and (max-width: 1023px) and (min-width: 992px) {
-    #header_container {
-        @include mixins.flex(space-between, 0, row, center);
-        @include mixins.espacamento(1.3rem 1%, 0);
-    }
+  #header_container {
+    @include mixins.flex(space-between, 0, row, center);
+    @include mixins.espacamento(1.3rem 1%, 0);
+  }
 }
 
-@media screen and (min-width:768px) and (max-width: 991px){
-    #header_container {
-        @include mixins.espacamento(1.3rem 0, 0);
-        @include mixins.flex(space-between, 0, row, center);
-    }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #header_container {
+    @include mixins.espacamento(1.3rem 0, 0);
+    @include mixins.flex(space-between, 0, row, center);
+  }
 }
 
 /* Celular */
-@media screen and (max-width:767px) {
-    .mobile_show {
-        display: block;
-    }
+@media screen and (max-width: 767px) {
+  .mobile_show {
+    display: block;
+  }
 
-    .mobile_hide {
-        display: none;
-    }
+  .mobile_hide {
+    display: none;
+  }
 
-    #nav-bar {
-        @include mixins.div-config(transparent, transparent, 0);
-        @include mixins.flex(center, 10px, column, start);
-    }
+  #nav-bar {
+    @include mixins.div-config(transparent, transparent, 0);
+    @include mixins.flex(center, 10px, column, start);
+  }
 }
