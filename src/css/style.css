@@ -10,7 +10,8 @@
   color: rgb(52, 52, 52);
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -158,6 +159,18 @@ html, body {
   vertical-align: middle;
 }
 
+.body-cadastro {
+  background: transparent !important;
+}
+.body-cadastro .container {
+  margin: auto;
+  padding: 4rem 0;
+}
+.body-cadastro h4 {
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+
 .lista-integrantes {
   margin: 3rem 0;
   padding: 0;
@@ -184,10 +197,70 @@ html, body {
 }
 
 footer {
-  background: url("../assets/footer.svg") no-repeat;
+  width: 100%;
 }
 footer .footer_container {
-  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 0;
+  flex-direction: row;
+  align-items: start;
+  flex-wrap: nowrap;
+}
+footer .div-footer {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+footer .div-footer ul {
+  margin: 0;
+  padding: 0;
+}
+footer .div-footer ul li {
+  list-style: none;
+  text-align: center;
+}
+footer .div-footer ul li a {
+  text-decoration: underline;
+  color: rgb(52, 52, 52);
+}
+footer .div-footer .div-icone {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.69);
+  border: 1px solid rgb(47, 93, 178);
+  border-radius: 100px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+footer .div-footer .div-icone img {
+  width: 20px;
+  height: 20px;
+}
+footer .div-footer .div-icone img:last-child {
+  width: 25px;
+  height: 25px;
+}
+footer .parceria {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: rgba(255, 255, 255, 0.69);
+  border: 1px solid rgb(47, 93, 178);
+  border-radius: 10px;
+  margin: 0;
+  padding: 10px;
+}
+footer .parceria img {
+  width: 150px;
+  height: 36px;
 }
 
 /* Desktop */
@@ -271,7 +344,4 @@ footer .footer_container {
     align-items: start;
     flex-wrap: nowrap;
   }
-}
-.body-cadastro {
-  background: transparent !important;
 }/*# sourceMappingURL=style.css.map */

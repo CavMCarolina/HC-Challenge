@@ -11,7 +11,8 @@
   color: variaveis.$cor_texto;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -128,6 +129,19 @@ html, body {
   }
 }
 
+.body-cadastro {
+  background: transparent !important;
+
+  .container {
+    @include mixins.espacamento(auto, 4rem 0);
+  }
+
+  h4 {
+    text-decoration: underline;
+    margin-bottom: 15px;
+  }
+}
+
 .lista-integrantes {
   @include mixins.espacamento(3rem 0, 0);
   display: grid;
@@ -150,10 +164,56 @@ html, body {
 }
 
 footer {
-  background: url('../assets/footer.svg') no-repeat;
+  width: 100%;
   
   .footer_container {
-    height: 100%;
+    @include mixins.flex(space-around, 0, row, start);
+  }
+
+  .div-footer {
+    @include mixins.flex(center, 0, column);
+
+    ul {
+      @include mixins.espacamento(0, 0);
+
+      li {
+        list-style: none;
+        text-align: center;
+
+        a {
+          @include mixins.link(underline);
+        }
+      }
+    }
+
+    .div-icone {
+      padding: 15px;
+      @include mixins.div-config(
+        variaveis.$nuvem,
+        variaveis.$cor_escura,
+        100px
+      );
+      max-width: fit-content;
+      max-height: fit-content;
+
+      img {
+        @include mixins.size(20px, 20px);
+
+        &:last-child {
+          @include mixins.size(25px, 25px);
+        }
+      }
+    }
+  }
+
+  .parceria {
+    @include mixins.flex(center, 10px, column);
+    @include mixins.div-config(variaveis.$nuvem, variaveis.$cor_escura, 10px);
+    @include mixins.espacamento(0, 10px);
+
+    img {
+      @include mixins.size(150px, 36px);
+    }
   }
 }
 
@@ -207,10 +267,4 @@ footer {
     @include mixins.div-config(transparent, transparent, 0);
     @include mixins.flex(center, 10px, column, start);
   }
-}
-
-
-
-.body-cadastro {
-  background: transparent !important;
 }
