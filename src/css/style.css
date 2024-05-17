@@ -271,4 +271,7 @@ footer .footer_container {
     align-items: start;
     flex-wrap: nowrap;
   }
+}
+.body-cadastro {
+  background: transparent !important;
 }/*# sourceMappingURL=style.css.map */

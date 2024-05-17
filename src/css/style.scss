@@ -208,3 +208,9 @@ footer {
     @include mixins.flex(center, 10px, column, start);
   }
 }
+
+
+
+.body-cadastro {
+  background: transparent !important;
+}
