@@ -174,7 +174,7 @@ export default function Cadastro() {
   }
 
   return (
-    <body>
+    <body className="body-cadastro">
       <hr className="hr-normal" />
       <img src={bg} alt="Foto de fundo" className="bg" />
       <div className="container">
