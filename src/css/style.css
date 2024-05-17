@@ -10,6 +10,10 @@
   color: rgb(52, 52, 52);
 }
 
+html, body {
+  height: 100%;
+}
+
 .mobile_show {
   display: none;
 }
@@ -179,14 +183,11 @@
   color: rgb(52, 52, 52);
 }
 
-footer svg {
-  z-index: -100;
-  width: 100%;
-  position: absolute;
+footer {
+  background: url("../assets/footer.svg") no-repeat;
 }
 footer .footer_container {
-  margin: 10rem 0;
-  padding: 0;
+  height: 100%;
 }
 
 /* Desktop */

@@ -11,6 +11,10 @@
   color: variaveis.$cor_texto;
 }
 
+html, body {
+  height: 100%;
+}
+
 // Coisas que SÓ aparecerão no mobile
 .mobile_show {
   display: none;
@@ -146,14 +150,10 @@
 }
 
 footer {
-  svg {
-    z-index: -100;
-    width: 100%;
-    position: absolute;
-  }
-
+  background: url('../assets/footer.svg') no-repeat;
+  
   .footer_container {
-    @include mixins.espacamento(10rem 0, 0);
+    height: 100%;
   }
 }
 
