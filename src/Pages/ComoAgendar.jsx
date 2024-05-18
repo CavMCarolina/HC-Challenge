@@ -4,7 +4,6 @@ export default function ComoAgendar() {
   return (
     <main>
       <hr className="hr-normal" />
-      <img src={bg} alt="Foto de fundo" className="bg" />
       <div className="main_container">
         <h1>Como Agendar?</h1>
         <iframe

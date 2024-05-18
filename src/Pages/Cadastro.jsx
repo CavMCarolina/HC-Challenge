@@ -178,7 +178,6 @@ export default function Cadastro() {
     <body className="body-cadastro">
       <main>
         <hr className="hr-normal" />
-        <img src={bg} alt="Foto de fundo" className="bg" />
         <div className="container">
           <div className="text-center py-3">
             <h1 className="fs-1">Torne-se um Voluntário!</h1>
@@ -191,7 +190,7 @@ export default function Cadastro() {
             </p>
           </div>
           <hr className="my-4" />
-          <div className="row justify-content-center">
+          <div className="row justify-content-center" id="cadastro_container">
             <div className="col-lg-8">
               <h4>Dados Pessoais:</h4>
               <form className="needs-validation">

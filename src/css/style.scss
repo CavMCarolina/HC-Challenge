@@ -27,7 +27,8 @@ body {
 }
 
 #header_container {
-  @include mixins.flex(auto, 20px, column, start);
+  @include mixins.flex(space-around, 20px, row, start);
+  @include mixins.espacamento(2rem auto, 0);
 }
 
 #cabecalho {
@@ -85,29 +86,30 @@ body {
 }
 
 // Foto de background
-.bg {
-  z-index: -100;
-  position: absolute;
-  width: 100%;
-  min-height: 1000px;
-  object-fit: cover;
+main {
+  background: url('../assets/background.jpg') no-repeat center;
+  background-size: cover;
+  border-bottom: 2px solid white;
 }
 
 .main_container {
-  @include mixins.espacamento(0 11rem, 5rem 0);
+  h1 {
+    @include mixins.espacamento(3rem 10%, 0);
+  }
 
   .home {
-    @include mixins.flex(none, 100px);
+    @include mixins.flex(center, 30px, column);
+    @include mixins.espacamento(0 1rem, 0);
 
     #video_home {
       @include mixins.div-config(none, transparent, 20px);
-      @include mixins.size(70%, 31rem);
+      @include mixins.size(100%, 20rem);
     }
 
     p {
-      @include mixins.size(50%, auto);
-      @include mixins.div-config(rgba(255, 255, 255, 0.47), black, 10px);
-      @include mixins.espacamento(0, 1rem 2rem);
+      @include mixins.div-config(variaveis.$nuvem, variaveis.$cor_escura, 20px);
+      @include mixins.size(100%, auto);
+      @include mixins.espacamento(0, 1rem);
     }
   }
 }
@@ -139,6 +141,20 @@ body {
   h4 {
     text-decoration: underline;
     margin-bottom: 15px;
+  }
+
+  .btn {
+    color: variaveis.$cor_principal;
+    border-color: variaveis.$cor_principal;
+
+    &:hover {
+      @include mixins.div-config(variaveis.$cor_principal, variaveis.$cor_escura, auto);
+    }
+
+    // &:focus {
+    //   @include mixins.div-config(variaveis.$cor_escura, variaveis.$cor_escura, auto);
+    //   color: variaveis.$branco;
+    // }
   }
 }
 
@@ -174,6 +190,7 @@ footer {
     @include mixins.flex(center, 0, column);
 
     ul {
+      // Espacamento necessario por causa do bootstrap
       @include mixins.espacamento(0, 0);
 
       li {
@@ -218,35 +235,29 @@ footer {
 }
 
 /* Desktop */
-@media screen and (min-width: 1300px) {
-  #header_container {
-    @include mixins.espacamento(1.3rem 10%, 0);
-    @include mixins.flex(space-between, 0, row, center);
+@media screen and (min-width: 1024px) {
+  .main_container {
+    @include mixins.espacamento(0 11rem, 5rem 0);
+  
+    .home {
+      @include mixins.flex(none, 100px);
+  
+      #video_home {
+        @include mixins.div-config(none, transparent, 20px);
+        @include mixins.size(70%, 31rem);
+      }
+  
+      p {
+        @include mixins.size(50%, auto);
+        @include mixins.div-config(rgba(255, 255, 255, 0.47), black, 10px);
+        @include mixins.espacamento(0, 1rem 2rem);
+      }
+    }
   }
 }
 
-@media screen and (min-width: 1170px) and (max-width: 1299px) {
-  #header_container {
-    @include mixins.flex(space-between, 0, row, center);
-    @include mixins.espacamento(1.3rem 7%, 0);
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1169px) {
-  #header_container {
-    @include mixins.flex(space-between, 0, row, center);
-    @include mixins.espacamento(1.3rem 2%, 0);
-  }
-}
 /* Tablet */
-@media screen and (max-width: 1023px) and (min-width: 992px) {
-  #header_container {
-    @include mixins.flex(space-between, 0, row, center);
-    @include mixins.espacamento(1.3rem 1%, 0);
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #header_container {
     @include mixins.espacamento(1.3rem 0, 0);
     @include mixins.flex(space-between, 0, row, center);
@@ -263,8 +274,75 @@ footer {
     display: none;
   }
 
+  #header_container {
+    @include mixins.flex(space-around, 20px, column, start);
+    @include mixins.espacamento(2rem, 0);
+  }
+
   #nav-bar {
     @include mixins.div-config(transparent, transparent, 0);
     @include mixins.flex(center, 10px, column, start);
+    @include mixins.espacamento(1.5rem 0, 0);
+
+    .dropdown-menu {
+      @include mixins.espacamento(10px 0 , 0);
+    }
+  }
+
+  // Home
+  .main_container {
+    @include mixins.espacamento(0 1rem, 0);
+    h1 {
+      @include mixins.espacamento(3rem 10% 0 10%, 0);
+    }
+
+    .video {
+      @include mixins.size(100%, 50rem);
+      @include mixins.div-config(none, transparent, 20px);
+    }
+
+    .home {
+      @include mixins.flex(center, 20px, column);
+  
+      p {
+        @include mixins.size(100%, auto);
+        @include mixins.espacamento(0, 1rem);
+      }
+    }
+  }
+
+  // Nossa Equipe
+  .lista-integrantes {
+    @include mixins.espacamento(3rem 0, 0);
+    @include mixins.flex(auto, 50px, column, center, wrap);
+
+    .div-integrante {
+      max-width: 280px;
+
+      .foto_integrante {
+        max-width: 280px;
+      }
+    }
+
+    a {
+      word-wrap: break-word;
+    }
+
+    h2 {
+      margin-top: 1rem;
+    }
+  }
+
+  // Candidate-se
+  #cadastro_container {
+    @include mixins.espacamento(auto 1rem, 0);
+  }
+
+  footer {
+    width: 100%;
+    
+    .footer_container {
+      @include mixins.flex(space-around, 3rem, column, center);
+    }
   }
 }

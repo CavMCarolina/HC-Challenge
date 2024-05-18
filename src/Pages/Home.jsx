@@ -6,11 +6,11 @@ export default function Main() {
     <>
       <main>
         <hr className="hr-normal" />
-        <img src={bg} alt="Foto de fundo" className="bg" />
         <div className="main_container">
+          <h1>Home</h1>
           <div className="home">
             <iframe
-              id="video_home"
+              className="video"
               src="https://www.youtube.com/embed/dfaM_jT1LkQ?si=88rT5f0Vo1VTrZ0u"
               title="YouTube video player"
               frameborder="0"

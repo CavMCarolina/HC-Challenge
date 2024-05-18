@@ -9,12 +9,11 @@ export default function NossaEquipe() {
     <>
       <main>
         <hr className="hr-normal" />
-        <img src={bg} alt="Foto de fundo" className="bg" />
         <div className="main_container">
           <h1>Nosso Time</h1>
           <div className="lista-integrantes">
             {data.map((integrante, index) => (
-              <div id="card" key={index} className="integrante">
+              <div id="card" key={index} className="div-integrante">
                 <img src={integrante.foto} className="foto_integrante" />
                 <div>
                   <h2>{integrante.nome}</h2>
@@ -23,7 +22,7 @@ export default function NossaEquipe() {
                     {integrante.email}
                   </p>
                   <p>
-                    <img src={linkedin} className="icone" />
+                    <img src={linkedin} className="icone"/>
                     <a href={integrante.linkedin}>{integrante.linkedin}</a>
                   </p>
                 </div>

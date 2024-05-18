@@ -4,7 +4,6 @@ export default function RaioX() {
   return (
     <main>
       <hr className="hr-normal" />
-      <img src={bg} alt="Foto de fundo" className="bg" />
       <div className="main_container">
         <h1>Exames - Raio-X</h1>
         <iframe

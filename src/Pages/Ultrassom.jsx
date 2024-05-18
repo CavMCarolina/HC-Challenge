@@ -4,7 +4,6 @@ export default function Ultrassom() {
   return (
     <main>
       <hr className="hr-normal" />
-      <img src={bg} alt="Foto de fundo" className="bg" />
       <div className="main_container">
         <h1>Exames - Ultrassom</h1>
         <iframe
