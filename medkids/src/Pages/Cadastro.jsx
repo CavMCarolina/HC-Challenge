@@ -1,4 +1,4 @@
-import React from "react";
+import {useState} from "react";
 
 export default function Cadastro() {
     const [nome, setNome] = React.useState('');
@@ -141,7 +141,6 @@ export default function Cadastro() {
 
         console.log(`nome: ${localStorage.getItem('nome')}, sobrenome: ${localStorage.getItem('sobrenome')}, email: ${localStorage.getItem('email')}, telefone: ${localStorage.getItem('telefone')}, prefencia: ${localStorage.getItem('preferencia')}, cep: ${localStorage.getItem('cep')}, endereco: ${localStorage.getItem('endereco')}, numero: ${localStorage.getItem('numero')}, pais: ${localStorage.getItem('pais')}, estado: ${localStorage.getItem('estado')}, cidade: ${localStorage.getItem('cidade')} mensagem: ${localStorage.getItem('mensagem')}`, `tocar: ${localStorage.getItem('tocar')}, instrumentos: ${localStorage.getItem('instrumentos')}, piadas: ${localStorage.getItem('piadas')}, fantasia: ${localStorage.getItem('fantasia')}, palhaco: ${localStorage.getItem('palhaco')}, termos: ${localStorage.getItem('termos')}, contactado: ${localStorage.getItem('call')}`);
     }
-
 
     return (
         <body>
