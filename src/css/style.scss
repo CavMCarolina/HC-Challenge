@@ -244,7 +244,7 @@ footer {
   
       #video_home {
         @include mixins.div-config(none, transparent, 20px);
-        @include mixins.size(70%, 31rem);
+        @include mixins.size(70%, 50rem);
       }
   
       p {
@@ -259,8 +259,7 @@ footer {
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   #header_container {
-    @include mixins.espacamento(1.3rem 0, 0);
-    @include mixins.flex(space-between, 0, row, center);
+    @include mixins.espacamento(2rem, 0);
   }
 }
 
@@ -289,7 +288,14 @@ footer {
     }
   }
 
-  // Home
+  // Foto de background
+  main {
+    background: url('../assets/background.jpg') no-repeat center;
+    background-size: cover;
+    border-bottom: 2px solid white;
+    min-height: 50rem;
+  }
+
   .main_container {
     @include mixins.espacamento(0 1rem, 0);
     h1 {
@@ -297,7 +303,7 @@ footer {
     }
 
     .video {
-      @include mixins.size(100%, 50rem);
+      @include mixins.size(100%, 25rem);
       @include mixins.div-config(none, transparent, 20px);
     }
 

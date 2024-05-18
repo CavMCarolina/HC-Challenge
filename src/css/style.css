@@ -292,7 +292,7 @@ footer .parceria img {
     border: 1px solid transparent;
     border-radius: 20px;
     width: 70%;
-    height: 31rem;
+    height: 50rem;
   }
   .main_container .home p {
     width: 50%;
@@ -307,14 +307,8 @@ footer .parceria img {
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   #header_container {
-    margin: 1.3rem 0;
+    margin: 2rem;
     padding: 0;
-    display: flex;
-    justify-content: space-between;
-    gap: 0;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: nowrap;
   }
 }
 /* Celular */
@@ -352,6 +346,12 @@ footer .parceria img {
     margin: 10px 0;
     padding: 0;
   }
+  main {
+    background: url("../assets/background.jpg") no-repeat center;
+    background-size: cover;
+    border-bottom: 2px solid white;
+    min-height: 50rem;
+  }
   .main_container {
     margin: 0 1rem;
     padding: 0;
@@ -362,7 +362,7 @@ footer .parceria img {
   }
   .main_container .video {
     width: 100%;
-    height: 50rem;
+    height: 25rem;
     background-color: none;
     border: 1px solid transparent;
     border-radius: 20px;
