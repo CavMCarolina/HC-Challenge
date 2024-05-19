@@ -16,16 +16,6 @@ body {
   height: 100%;
 }
 
-// Coisas que SÓ aparecerão no mobile
-.mobile_show {
-  display: none;
-}
-
-// Coisas que NÃO aparecerão no mobile
-.mobile_hide {
-  display: block;
-}
-
 #header_container {
   @include mixins.flex(space-around, 20px, row, start);
   @include mixins.espacamento(2rem auto, 0);
@@ -89,35 +79,22 @@ body {
 main {
   background: url('../assets/background.jpg') no-repeat center;
   background-size: cover;
-  border-bottom: 2px solid white;
 }
 
 .main_container {
-  h1 {
-    @include mixins.espacamento(3rem 10%, 0);
-  }
-
   .home {
-    @include mixins.flex(center, 30px, column);
-    @include mixins.espacamento(0 1rem, 0);
-
     #video_home {
       @include mixins.div-config(none, transparent, 20px);
-      @include mixins.size(100%, 20rem);
     }
 
     p {
       @include mixins.div-config(variaveis.$nuvem, variaveis.$cor_escura, 20px);
-      @include mixins.size(100%, auto);
-      @include mixins.espacamento(0, 1rem);
     }
   }
-}
 
-.video {
-  @include mixins.size(100%, 50rem);
-  @include mixins.div-config(none, transparent, 20px);
-  @include mixins.espacamento(2rem 0, 0);
+  .video {
+    @include mixins.div-config(none, transparent, 20px);
+  }
 }
 
 .page_not_found {
@@ -236,21 +213,32 @@ footer {
 
 /* Desktop */
 @media screen and (min-width: 1024px) {
+  main {
+    min-height: 900px;
+  }
+
   .main_container {
-    @include mixins.espacamento(0 11rem, 5rem 0);
+    @include mixins.espacamento(0 5%, 5rem 0);
+
+    h1 {
+      margin-bottom: 2rem;
+    }
+
+    .video {
+      @include mixins.size(100%, 50rem);
+      @include mixins.espacamento(2rem 0, 0);
+    }
   
     .home {
-      @include mixins.flex(none, 100px);
+      @include mixins.flex(none, 7%);
   
       #video_home {
-        @include mixins.div-config(none, transparent, 20px);
-        @include mixins.size(70%, 50rem);
+        @include mixins.size(80%, 40rem);
       }
   
       p {
         @include mixins.size(50%, auto);
-        @include mixins.div-config(rgba(255, 255, 255, 0.47), black, 10px);
-        @include mixins.espacamento(0, 1rem 2rem);
+        @include mixins.espacamento(0, 3%);
       }
     }
   }
@@ -265,14 +253,6 @@ footer {
 
 /* Celular */
 @media screen and (max-width: 767px) {
-  .mobile_show {
-    display: block;
-  }
-
-  .mobile_hide {
-    display: none;
-  }
-
   #header_container {
     @include mixins.flex(space-around, 20px, column, start);
     @include mixins.espacamento(2rem, 0);
@@ -290,21 +270,18 @@ footer {
 
   // Foto de background
   main {
-    background: url('../assets/background.jpg') no-repeat center;
-    background-size: cover;
-    border-bottom: 2px solid white;
     min-height: 50rem;
   }
 
   .main_container {
-    @include mixins.espacamento(0 1rem, 0);
+    @include mixins.espacamento(0 5%, 0);
+
     h1 {
-      @include mixins.espacamento(3rem 10% 0 10%, 0);
+      @include mixins.espacamento(3rem 5% 2rem 5%, 0);
     }
 
     .video {
       @include mixins.size(100%, 25rem);
-      @include mixins.div-config(none, transparent, 20px);
     }
 
     .home {
@@ -313,6 +290,12 @@ footer {
       p {
         @include mixins.size(100%, auto);
         @include mixins.espacamento(0, 1rem);
+      }
+
+      #video_home {
+        @include mixins.size(100%, 25rem);
+        @include mixins.div-config(none, transparent, 20px);
+        @include mixins.espacamento(2rem 0, 0);
       }
     }
   }

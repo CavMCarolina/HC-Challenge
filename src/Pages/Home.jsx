@@ -10,7 +10,7 @@ export default function Main() {
           <h1>Home</h1>
           <div className="home">
             <iframe
-              className="video"
+              id="video_home"
               src="https://www.youtube.com/embed/dfaM_jT1LkQ?si=88rT5f0Vo1VTrZ0u"
               title="YouTube video player"
               frameborder="0"
