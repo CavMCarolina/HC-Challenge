@@ -125,11 +125,11 @@ main {
   flex-wrap: nowrap;
 }
 .main_container .div_manutencao .manutencao {
-  width: 60%;
+  width: 100%;
   height: auto;
   background-color: rgba(255, 255, 255, 0.69);
   border: 1px solid rgb(47, 93, 178);
-  border-radius: 50px;
+  border-radius: 30px;
 }
 
 .page_not_found {
@@ -297,6 +297,10 @@ footer .parceria img {
     width: 50%;
     height: -moz-fit-content;
     height: fit-content;
+  }
+  .main_container .div_manutencao .manutencao {
+    width: 80%;
+    height: auto;
   }
   .footer_container {
     display: flex;
