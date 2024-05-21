@@ -7,6 +7,7 @@ import parceria from "../../assets/parceria.png";
 export default function Footer() {
   return (
     <>
+    <hr className="hr-normal"/>
       <footer>
         <div className="footer_container">
           <div className="div-footer">

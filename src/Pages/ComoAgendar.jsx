@@ -1,5 +1,3 @@
-import bg from "../assets/background.jpg";
-
 export default function ComoAgendar() {
   return (
     <main>
@@ -8,12 +6,12 @@ export default function ComoAgendar() {
         <h1>Como Agendar?</h1>
         <iframe
           className="video"
-          src="https://www.youtube.com/embed/dfaM_jT1LkQ?si=88rT5f0Vo1VTrZ0u"
+          src="https://www.youtube.com/embed/2TqJb3p8kiI?si=fKimDmbVjcjGnjkk"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen=""
+          allowfullscreen
         ></iframe>
       </div>
     </main>

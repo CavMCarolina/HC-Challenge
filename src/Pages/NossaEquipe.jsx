@@ -13,25 +13,22 @@ export default function NossaEquipe() {
           <h1>Nosso Time</h1>
           <div className="lista-integrantes">
             {data.map((integrante, index) => (
-              <div id="card" key={index} className="div-integrante">
+              <div id="card" key={index}>
                 <img src={integrante.foto} className="foto_integrante" />
-                <div>
-                  <h2>{integrante.nome}</h2>
-                  <p>
-                    <img src={email} className="icone" />
-                    {integrante.email}
-                  </p>
-                  <p>
-                    <img src={linkedin} className="icone"/>
-                    <a href={integrante.linkedin}>{integrante.linkedin}</a>
-                  </p>
-                </div>
+                <h2>{integrante.nome}</h2>
+                <p>
+                  <img src={email} className="icone" />
+                  {integrante.email}
+                </p>
+                <p>
+                  <img src={linkedin} className="icone" />
+                  <a href={integrante.linkedin}>{integrante.linkedin}</a>
+                </p>
               </div>
             ))}
           </div>
         </div>
       </main>
-      <Footer/>
     </>
   );
 }

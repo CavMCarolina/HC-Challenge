@@ -77,7 +77,7 @@ body {
 
 // Foto de background
 main {
-  background: url('../assets/background.jpg') no-repeat center;
+  background: url("../assets/background.jpg") no-repeat center;
   background-size: cover;
 }
 
@@ -89,11 +89,21 @@ main {
 
     p {
       @include mixins.div-config(variaveis.$nuvem, variaveis.$cor_escura, 20px);
+      @include mixins.espacamento(0, 3%);
     }
   }
 
   .video {
     @include mixins.div-config(none, transparent, 20px);
+  }
+
+  .div_manutencao {
+    @include mixins.flex(center, 0);
+    
+    .manutencao {
+      @include mixins.size(60%, auto);
+      @include mixins.div-config(variaveis.$nuvem, variaveis.$cor_escura, 50px);
+    }
   }
 }
 
@@ -125,7 +135,11 @@ main {
     border-color: variaveis.$cor_principal;
 
     &:hover {
-      @include mixins.div-config(variaveis.$cor_principal, variaveis.$cor_escura, auto);
+      @include mixins.div-config(
+        variaveis.$cor_principal,
+        variaveis.$cor_escura,
+        auto
+      );
     }
 
     // &:focus {
@@ -137,8 +151,7 @@ main {
 
 .lista-integrantes {
   @include mixins.espacamento(3rem 0, 0);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  
 
   .foto_integrante {
     @include mixins.size(21.875rem, 21.875rem);
@@ -151,17 +164,23 @@ main {
     margin-right: 5px;
   }
 
+  h2 {
+    margin-top: 10px;
+  }
+
   a {
     @include mixins.link(underline);
+
+    &:hover {
+      color: variaveis.$cor_escura;
+    }
   }
 }
 
 footer {
   width: 100%;
-  
-  .footer_container {
-    @include mixins.flex(space-around, 0, row, start);
-  }
+  background-color: variaveis.$cor_clara;
+  @include mixins.espacamento(0, 3rem 0);
 
   .div-footer {
     @include mixins.flex(center, 0, column);
@@ -176,8 +195,16 @@ footer {
 
         a {
           @include mixins.link(underline);
+
+          &:hover {
+            color: variaveis.$cor_escura;
+          }
         }
       }
+    }
+
+    h3 {
+      margin-top: 10px;
     }
 
     .div-icone {
@@ -213,12 +240,13 @@ footer {
 
 /* Desktop */
 @media screen and (min-width: 1024px) {
+  // Foto de background
   main {
-    min-height: 900px;
+    min-height: 1000px;
   }
 
   .main_container {
-    @include mixins.espacamento(0 5%, 5rem 0);
+    @include mixins.espacamento(5rem 5%,0);
 
     h1 {
       margin-bottom: 2rem;
@@ -228,26 +256,57 @@ footer {
       @include mixins.size(100%, 50rem);
       @include mixins.espacamento(2rem 0, 0);
     }
-  
+
     .home {
       @include mixins.flex(none, 7%);
-  
+      @include mixins.size(auto , 43rem);
+
       #video_home {
-        @include mixins.size(80%, 40rem);
+        @include mixins.size(80%, 100%);
       }
-  
+
       p {
-        @include mixins.size(50%, auto);
-        @include mixins.espacamento(0, 3%);
+        @include mixins.size(50%, fit-content);
       }
     }
+  }
+
+  .footer_container {
+    @include mixins.flex(space-around, 0, row, start);
   }
 }
 
 /* Tablet */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  #header_container {
-    @include mixins.espacamento(2rem, 0);
+@media screen and (min-width: 768px) and (max-width: 1023px) { 
+  .main_container {
+    @include mixins.espacamento(4rem 10%,0);
+
+    h1 {
+      margin-bottom: 3rem;
+    }
+
+    .video {
+      @include mixins.size(100%, 30rem);
+      @include mixins.espacamento(2rem 0, 0);
+    }
+
+    .home {
+      @include mixins.flex(center, 50px, column);
+      @include mixins.size(100%, auto);
+
+      #video_home {
+        @include mixins.size(100%, 30rem);
+      }
+
+      p {
+        @include mixins.size(100%, fit-content);
+      }
+    }
+  }
+
+  .footer_container {
+    @include mixins.espacamento(0, 0 5%);
+    @include mixins.flex(space-between, 0, row, start);
   }
 }
 
@@ -264,7 +323,7 @@ footer {
     @include mixins.espacamento(1.5rem 0, 0);
 
     .dropdown-menu {
-      @include mixins.espacamento(10px 0 , 0);
+      @include mixins.espacamento(10px 0, 0);
     }
   }
 
@@ -286,7 +345,8 @@ footer {
 
     .home {
       @include mixins.flex(center, 20px, column);
-  
+      margin-bottom: 3rem;
+
       p {
         @include mixins.size(100%, auto);
         @include mixins.espacamento(0, 1rem);
@@ -302,7 +362,6 @@ footer {
 
   // Nossa Equipe
   .lista-integrantes {
-    @include mixins.espacamento(3rem 0, 0);
     @include mixins.flex(auto, 50px, column, center, wrap);
 
     .div-integrante {
@@ -313,12 +372,12 @@ footer {
       }
     }
 
-    a {
-      word-wrap: break-word;
-    }
-
     h2 {
       margin-top: 1rem;
+    }
+
+    a {
+      word-wrap: break-word;
     }
   }
 
@@ -329,7 +388,7 @@ footer {
 
   footer {
     width: 100%;
-    
+
     .footer_container {
       @include mixins.flex(space-around, 3rem, column, center);
     }

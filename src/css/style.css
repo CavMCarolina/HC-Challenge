@@ -108,11 +108,28 @@ main {
   background-color: rgba(255, 255, 255, 0.69);
   border: 1px solid rgb(47, 93, 178);
   border-radius: 20px;
+  margin: 0;
+  padding: 3%;
 }
 .main_container .video {
   background-color: none;
   border: 1px solid transparent;
   border-radius: 20px;
+}
+.main_container .div_manutencao {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.main_container .div_manutencao .manutencao {
+  width: 60%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.69);
+  border: 1px solid rgb(47, 93, 178);
+  border-radius: 50px;
 }
 
 .page_not_found {
@@ -150,8 +167,6 @@ main {
 .lista-integrantes {
   margin: 3rem 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
 }
 .lista-integrantes .foto_integrante {
   width: 21.875rem;
@@ -167,21 +182,22 @@ main {
   height: 25px;
   margin-right: 5px;
 }
+.lista-integrantes h2 {
+  margin-top: 10px;
+}
 .lista-integrantes a {
   text-decoration: underline;
   color: rgb(52, 52, 52);
 }
+.lista-integrantes a:hover {
+  color: rgb(47, 93, 178);
+}
 
 footer {
   width: 100%;
-}
-footer .footer_container {
-  display: flex;
-  justify-content: space-around;
-  gap: 0;
-  flex-direction: row;
-  align-items: start;
-  flex-wrap: nowrap;
+  background-color: rgba(24, 197, 255, 0.4117647059);
+  margin: 0;
+  padding: 3rem 0;
 }
 footer .div-footer {
   display: flex;
@@ -202,6 +218,12 @@ footer .div-footer ul li {
 footer .div-footer ul li a {
   text-decoration: underline;
   color: rgb(52, 52, 52);
+}
+footer .div-footer ul li a:hover {
+  color: rgb(47, 93, 178);
+}
+footer .div-footer h3 {
+  margin-top: 10px;
 }
 footer .div-footer .div-icone {
   padding: 15px;
@@ -242,11 +264,11 @@ footer .parceria img {
 /* Desktop */
 @media screen and (min-width: 1024px) {
   main {
-    min-height: 900px;
+    min-height: 1000px;
   }
   .main_container {
-    margin: 0 5%;
-    padding: 5rem 0;
+    margin: 5rem 5%;
+    padding: 0;
   }
   .main_container h1 {
     margin-bottom: 2rem;
@@ -264,23 +286,70 @@ footer .parceria img {
     flex-direction: row;
     align-items: center;
     flex-wrap: nowrap;
+    width: auto;
+    height: 43rem;
   }
   .main_container .home #video_home {
     width: 80%;
-    height: 40rem;
+    height: 100%;
   }
   .main_container .home p {
     width: 50%;
-    height: auto;
-    margin: 0;
-    padding: 3%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .footer_container {
+    display: flex;
+    justify-content: space-around;
+    gap: 0;
+    flex-direction: row;
+    align-items: start;
+    flex-wrap: nowrap;
   }
 }
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  #header_container {
-    margin: 2rem;
+  .main_container {
+    margin: 4rem 10%;
     padding: 0;
+  }
+  .main_container h1 {
+    margin-bottom: 3rem;
+  }
+  .main_container .video {
+    width: 100%;
+    height: 30rem;
+    margin: 2rem 0;
+    padding: 0;
+  }
+  .main_container .home {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: auto;
+  }
+  .main_container .home #video_home {
+    width: 100%;
+    height: 30rem;
+  }
+  .main_container .home p {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .footer_container {
+    margin: 0;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    flex-direction: row;
+    align-items: start;
+    flex-wrap: nowrap;
   }
 }
 /* Celular */
@@ -334,6 +403,7 @@ footer .parceria img {
     flex-direction: column;
     align-items: center;
     flex-wrap: nowrap;
+    margin-bottom: 3rem;
   }
   .main_container .home p {
     width: 100%;
@@ -351,8 +421,6 @@ footer .parceria img {
     padding: 0;
   }
   .lista-integrantes {
-    margin: 3rem 0;
-    padding: 0;
     display: flex;
     justify-content: auto;
     gap: 50px;
@@ -366,11 +434,11 @@ footer .parceria img {
   .lista-integrantes .div-integrante .foto_integrante {
     max-width: 280px;
   }
-  .lista-integrantes a {
-    word-wrap: break-word;
-  }
   .lista-integrantes h2 {
     margin-top: 1rem;
+  }
+  .lista-integrantes a {
+    word-wrap: break-word;
   }
   #cadastro_container {
     margin: auto 1rem;
