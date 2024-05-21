@@ -289,9 +289,9 @@ footer {
     //   #card:nth-child(4) {
     //     margin-left: 50%;
     //   }
-      
+
     //   #card:nth-child(5) {
-    //     margin-left: 60%; 
+    //     margin-left: 60%;
     //   }
     // }
   }
@@ -304,16 +304,35 @@ footer {
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   #header_container {
-    @include mixins.flex(star, 0, column, start);
+    @include mixins.flex(auto, 0, column, start);
+
+    #cabecalho {
+      @include mixins.espacamento(1rem 6%, 0);
+    }
+
+    .navbar {
+      @include mixins.flex(center, 0, center);
+      width: 100%;
+      margin-top: 1rem;
+
+      .dropdown-menu {
+        position: absolute !important;
+      }
+    }
+    
   }
 
   .navbar-toggler {
     display: none;
   }
 
-  .collapse, .navbar-collapse, .navbar-nav, #nav-bar, #navbarNavDarkDropdown {
-    display: flex !important;
-    flex-direction: row;
+  // Todas as classes do nav pq não sei o que cada uma faz no bootstrap :)
+  .collapse,
+  .navbar-collapse,
+  .navbar-nav,
+  #nav-bar,
+  #navbarNavDarkDropdown {
+    @include mixins.flex(center, 0, row, center);
   }
 
   .main_container {
