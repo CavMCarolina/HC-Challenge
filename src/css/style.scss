@@ -303,6 +303,19 @@ footer {
 
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  #header_container {
+    @include mixins.flex(star, 0, column, start);
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+
+  .collapse, .navbar-collapse, .navbar-nav, #nav-bar, #navbarNavDarkDropdown {
+    display: flex !important;
+    flex-direction: row;
+  }
+
   .main_container {
     @include mixins.espacamento(4rem 10%, 0);
 

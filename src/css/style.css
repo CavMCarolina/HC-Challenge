@@ -313,6 +313,21 @@ footer .parceria img {
 }
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  #header_container {
+    display: flex;
+    justify-content: star;
+    gap: 0;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: nowrap;
+  }
+  .navbar-toggler {
+    display: none;
+  }
+  .collapse, .navbar-collapse, .navbar-nav, #nav-bar, #navbarNavDarkDropdown {
+    display: flex !important;
+    flex-direction: row;
+  }
   .main_container {
     margin: 4rem 10%;
     padding: 0;
