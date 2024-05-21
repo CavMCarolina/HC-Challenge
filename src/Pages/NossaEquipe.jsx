@@ -2,7 +2,6 @@ import bg from "../assets/background.jpg";
 import email from "../assets/email.png";
 import linkedin from "../assets/linkedin.png";
 import data from "../../dados/integrantes.json";
-import Footer from "../Componentes/Footer/Footer";
 
 export default function NossaEquipe() {
   return (
@@ -22,7 +21,7 @@ export default function NossaEquipe() {
                 </p>
                 <p>
                   <img src={linkedin} className="icone" />
-                  <a href={integrante.linkedin}>{integrante.linkedin}</a>
+                  <a href={integrante.linkedin}>Linkedin de: {integrante.nome}</a>
                 </p>
               </div>
             ))}
