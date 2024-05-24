@@ -1,5 +1,3 @@
-import bg from "../assets/background.jpg";
-
 export default function Sangue() {
   return (
     <main>

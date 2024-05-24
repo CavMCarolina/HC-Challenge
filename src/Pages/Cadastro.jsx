@@ -1,6 +1,4 @@
 import React from "react";
-import bg from "../assets/background.jpg";
-import Footer from "../Componentes/Footer/Footer";
 
 export default function Cadastro() {
   const [nome, setNome] = React.useState("");

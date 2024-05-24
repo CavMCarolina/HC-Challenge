@@ -1,6 +1,3 @@
-import Footer from "../Componentes/Footer/Footer";
-import bg from "../assets/background.jpg";
-
 export default function Main() {
   return (
     <>

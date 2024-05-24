@@ -1,4 +1,3 @@
-import bg from "../assets/background.jpg";
 import email from "../assets/email.png";
 import linkedin from "../assets/linkedin.png";
 import data from "../../dados/integrantes.json";
