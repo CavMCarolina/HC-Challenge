@@ -108,13 +108,13 @@ main {
 }
 
 .page_not_found {
-  @include mixins.size(100%, 100%);
-  background-color: #2e1b3b;
-  text-align: center;
+  @include mixins.size(100%, fit-content);
+  @include mixins.flex(center, 0);
+  margin-top: 3rem;
 
   img {
-    max-width: 1000px;
-    vertical-align: middle;
+    @include mixins.size(70%, auto);
+    @include mixins.div-config(transparent, transparent, 20px);
   }
 }
 
@@ -443,6 +443,13 @@ footer {
 
     .footer_container {
       @include mixins.flex(space-around, 3rem, column, center);
+    }
+  }
+
+  // 404
+  .page_not_found {
+    img {
+      @include mixins.size(100%, auto);
     }
   }
 }

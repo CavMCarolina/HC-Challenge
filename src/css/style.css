@@ -134,13 +134,22 @@ main {
 
 .page_not_found {
   width: 100%;
-  height: 100%;
-  background-color: #2e1b3b;
-  text-align: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-top: 3rem;
 }
 .page_not_found img {
-  max-width: 1000px;
-  vertical-align: middle;
+  width: 70%;
+  height: auto;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 20px;
 }
 
 .body-cadastro {
@@ -520,5 +529,9 @@ footer .parceria img {
     flex-direction: column;
     align-items: center;
     flex-wrap: nowrap;
+  }
+  .page_not_found img {
+    width: 100%;
+    height: auto;
   }
 }/*# sourceMappingURL=style.css.map */
