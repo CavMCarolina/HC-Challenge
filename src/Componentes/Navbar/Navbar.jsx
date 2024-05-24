@@ -103,10 +103,10 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link to='agendamentos/meusagendamentos' className="dropdown-item">
                     <img src={meus_agendamentos} />
                     <span>Meus agendamentos</span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -170,10 +170,10 @@ export default function Navbar() {
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link to='exames/maisexames' className="dropdown-item">
                     <img src={mais} />
                     <span>Ver mais exames</span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
