@@ -16,8 +16,8 @@ Requisitos:
 
 Escrever os seguintes códigos no cmd/Terminal do windows:
 
--npm i
+- npm i
 
--npm run dev
+- npm run dev
 
 devem ser escritos nessa sequência.
