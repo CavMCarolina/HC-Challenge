@@ -21,119 +21,10 @@ export default function Cadastro() {
   const [termos, setTermos] = React.useState("");
   const [call, setCall] = React.useState("");
 
-  const onChangeN = (event) => {
-    localStorage.setItem("nome", event.target.value);
-
-    setNome(event.target.value);
-  };
-
-  const onChangeS = (event) => {
-    localStorage.setItem("sobrenome", event.target.value);
-
-    setSobrenome(event.target.value);
-  };
-
-  const onChangeE = (event) => {
-    localStorage.setItem("email", event.target.value);
-
-    setEmail(event.target.value);
-  };
-
-  const onChangeT = (event) => {
-    localStorage.setItem("telefone", event.target.value);
-
-    setTelefone(event.target.value);
-  };
-
-  const onChangeP = (event) => {
-    localStorage.setItem("preferencia", event.target.value);
-
-    setPreferencia(event.target.value);
-  };
-
-  const onChangeC = (event) => {
-    localStorage.setItem("cep", event.target.value);
-
-    setCep(event.target.value);
-  };
-
-  const onChangeEn = (event) => {
-    localStorage.setItem("endereco", event.target.value);
-
-    setEndereco(event.target.value);
-  };
-
-  const onChangeNu = (event) => {
-    localStorage.setItem("numero", event.target.value);
-
-    setNumero(event.target.value);
-  };
-
-  const onChangePa = (event) => {
-    localStorage.setItem("pais", event.target.value);
-
-    setPais(event.target.value);
-  };
-
-  const onChangeEs = (event) => {
-    localStorage.setItem("estado", event.target.value);
-
-    setEstado(event.target.value);
-  };
-
-  const onChangeCi = (event) => {
-    localStorage.setItem("cidade", event.target.value);
-
-    setCidade(event.target.value);
-  };
-
-  const onChangeM = (event) => {
-    localStorage.setItem("mensagem", event.target.value);
-
-    setMensagem(event.target.value);
-  };
-
-  const onChangeTo = (event) => {
-    localStorage.setItem("tocar", event.target.value);
-
-    setTocar(event.target.value);
-  };
-
-  const onChangeI = (event) => {
-    localStorage.setItem("instrumentos", event.target.value);
-
-    setInstrumentos(event.target.value);
-  };
-
-  const onChangePi = (event) => {
-    localStorage.setItem("piadas", event.target.value);
-
-    setPiadas(event.target.value);
-  };
-
-  const onChangeF = (event) => {
-    localStorage.setItem("fantasia", event.target.value);
-
-    setFantasia(event.target.value);
-  };
-
-  const onChangePal = (event) => {
-    localStorage.setItem("palhaco", event.target.value);
-
-    setPalhaco(event.target.value);
-  };
-
-  const onChangeTe = (event) => {
-    localStorage.setItem("termos", event.target.value);
-
-    setTermos(event.target.value);
-  };
-
-  const onChangeCa = (event) => {
-    localStorage.setItem("call", event.target.value);
-
-    setCall(event.target.value);
-  };
+  const handleChange = (key, event, setter) => {
+    localStorage.setItem(key, event.target.value);
+    setter(event.target.value);
+}
 
   function submit(event) {
     event.preventDefault();
@@ -199,7 +90,7 @@ export default function Cadastro() {
                     </label>
                     <input
                       value={nome}
-                      onChange={onChangeN}
+                      onChange={e => handleChange('nome', e, setNome)}
                       type="text"
                       id="nome"
                       className="form-control"
@@ -213,7 +104,7 @@ export default function Cadastro() {
                     </label>
                     <input
                       value={sobrenome}
-                      onChange={onChangeS}
+                      onChange={e => handleChange('sobrenome', e, setSobrenome)}
                       type="text"
                       id="sobrenome"
                       className="form-control"
@@ -227,7 +118,7 @@ export default function Cadastro() {
                     <label htmlFor="email">Email</label>
                     <input
                       value={email}
-                      onChange={onChangeE}
+                      onChange={e => handleChange('email', e, setEmail)}
                       type="email"
                       id="email"
                       className="form-control"
@@ -239,7 +130,7 @@ export default function Cadastro() {
                     <label htmlFor="tel">Telefone:</label>
                     <input
                       value={telefone}
-                      onChange={onChangeT}
+                      onChange={e => handleChange('telefone', e, setTelefone)}
                       type="tel"
                       id="tel"
                       className="form-control"
@@ -251,7 +142,7 @@ export default function Cadastro() {
                     <label htmlFor="preferencia">Pref. de Contato:</label>
                     <select
                       value={preferencia}
-                      onChange={onChangeP}
+                      onChange={e => handleChange('preferencia', e, setPreferencia)}
                       name="preferencia"
                       id="preferencia"
                       className="form-select"
@@ -270,7 +161,7 @@ export default function Cadastro() {
                     </label>
                     <input
                       value={cep}
-                      onChange={onChangeC}
+                      onChange={e => handleChange('cep', e, setCep)}
                       type="text"
                       id="cep"
                       className="form-control"
@@ -284,7 +175,7 @@ export default function Cadastro() {
                     </label>
                     <input
                       value={endereco}
-                      onChange={onChangeEn}
+                      onChange={e => handleChange('endereco', e, setEndereco)}
                       type="text"
                       id="endereco"
                       className="form-control"
@@ -298,7 +189,7 @@ export default function Cadastro() {
                     </label>
                     <input
                       value={numero}
-                      onChange={onChangeNu}
+                      onChange={e => handleChange('numero', e, setNumero)}
                       type="text"
                       id="numero"
                       className="form-control"
@@ -314,7 +205,7 @@ export default function Cadastro() {
                     </label>
                     <input
                       value={pais}
-                      onChange={onChangePa}
+                      onChange={e => handleChange('pais', e, setPais)}
                       type="text"
                       id="país"
                       className="form-control"
@@ -328,7 +219,7 @@ export default function Cadastro() {
                     </label>
                     <select
                       value={estado}
-                      onChange={onChangeEs}
+                      onChange={e => handleChange('estado', e, setEstado)}
                       name="Estado"
                       id="Estado"
                       className="form-select"
@@ -370,7 +261,7 @@ export default function Cadastro() {
                     </label>
                     <input
                       value={cidade}
-                      onChange={onChangeCi}
+                      onChange={e => handleChange('cidade', e, setCidade)}
                       type="text"
                       id="cidade"
                       className="form-control"
@@ -388,7 +279,7 @@ export default function Cadastro() {
                     </label>
                     <textarea
                       value={mensagem}
-                      onChange={onChangeM}
+                      onChange={e => handleChange('mensagem', e, setMensagem)}
                       name="comentario"
                       id="comentario"
                       rows="3"
@@ -401,7 +292,7 @@ export default function Cadastro() {
                     <label htmlFor="tocar">Você toca algum instrumento?</label>
                     <select
                       value={tocar}
-                      onChange={onChangeTo}
+                      onChange={e => handleChange('tocar', e, setTocar)}
                       name="tocar"
                       id="tocar"
                       className="form-select"
@@ -416,7 +307,7 @@ export default function Cadastro() {
                     <label htmlFor="instrumentos">Se sim, quais?</label>
                     <textarea
                       value={instrumentos}
-                      onChange={onChangeI}
+                      onChange={e => handleChange('instrumentos', e, setInstrumentos)}
                       name="instrumentos"
                       id="instrumentos"
                       rows="1"
@@ -429,7 +320,7 @@ export default function Cadastro() {
                     <label htmlFor="piadas">Gosta de contar piadas?</label>
                     <select
                       value={piadas}
-                      onChange={onChangePi}
+                      onChange={e => handleChange('piadas', e, setPiadas)}
                       name="piadas"
                       id="piadas"
                       className="form-select"
@@ -444,7 +335,7 @@ export default function Cadastro() {
                     <label htmlFor="fantasia">Aceitaria se fantasiar?</label>
                     <select
                       value={fantasia}
-                      onChange={onChangeF}
+                      onChange={e => handleChange('fatasia', e, setFantasia)}
                       name="fantasia"
                       id="fantasia"
                       className="form-select"
@@ -461,7 +352,7 @@ export default function Cadastro() {
                     </label>
                     <select
                       value={palhaco}
-                      onChange={onChangePal}
+                      onChange={e => handleChange('palhaco', e, setPalhaco)}
                       name="palhaco"
                       id="palhaco"
                       className="form-select"
@@ -476,8 +367,6 @@ export default function Cadastro() {
                 <hr className="my-4" />
                 <div className="form-check">
                   <input
-                    value={termos}
-                    onChange={onChangeTe}
                     type="checkbox"
                     className="form-check-input"
                     id="termos"
@@ -491,8 +380,6 @@ export default function Cadastro() {
                 <br />
                 <div className="form-check">
                   <input
-                    value={call}
-                    onChange={onChangeCa}
                     type="checkbox"
                     className="form-check-input"
                     id="call"
