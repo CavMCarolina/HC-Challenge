@@ -150,12 +150,27 @@ main {
 }
 
 .lista-integrantes {
-  @include mixins.espacamento(3rem 0, 0);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 50px;
 
-  .foto_integrante {
-    @include mixins.size(21.875rem, 21.875rem);
-    @include mixins.div-config(none, variaveis.$cor_escura, 20px);
-    object-fit: cover;
+  #card {
+    width: 280px;
+    @include mixins.flex(center, 0, column);
+    margin: auto;
+
+    .foto_integrante {
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+
+      @include mixins.size(100%, 21.875rem);
+      @include mixins.div-config(none, variaveis.$cor_escura, 20px);
+      object-fit: cover;
+    }
+  }
+
+  #card:nth-child(5) {
+    grid-column: span 2;
   }
 
   .icone {
@@ -274,26 +289,6 @@ footer {
         @include mixins.size(80%, auto);
       }
     }
-
-    // Nossa Equipe
-    // .lista-integrantes {
-    //   display: grid;
-    //   grid-template-columns: repeat(3, 1fr);
-    //   grid-template-rows: auto auto;
-
-    //   #card {
-    //     text-align: center;
-    //     max-width: 280px;
-    //   }
-
-    //   #card:nth-child(4) {
-    //     margin-left: 50%;
-    //   }
-
-    //   #card:nth-child(5) {
-    //     margin-left: 60%;
-    //   }
-    // }
   }
 
   .footer_container {
@@ -319,7 +314,6 @@ footer {
         position: absolute !important;
       }
     }
-    
   }
 
   .navbar-toggler {
