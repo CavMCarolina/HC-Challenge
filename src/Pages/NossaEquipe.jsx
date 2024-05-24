@@ -8,7 +8,7 @@ export default function NossaEquipe() {
       <main>
         <hr className="hr-normal" />
         <div className="main_container">
-          <h1>Nosso Time</h1>
+          <h1>Nossa Equipe</h1>
           <div className="lista-integrantes">
             {data.map((integrante, index) => (
               <div id="card" key={index}>
