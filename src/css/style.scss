@@ -34,6 +34,17 @@ body {
   }
 }
 
+.titulo-cabecalho{
+  text-decoration: none;
+  color: variaveis.$cor_texto;
+}
+
+.titulo-cabecalho:hover{
+  color: variaveis.$cor_texto;
+  text-decoration: none;
+}
+
+
 #nav-bar {
   @include mixins.flex(end, 0);
 
