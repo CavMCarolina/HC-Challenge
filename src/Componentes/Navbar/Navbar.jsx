@@ -201,15 +201,6 @@ export default function Navbar() {
                     <span>Nossa equipe</span>
                   </Link>
                 </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    <img src={sobre} />
-                    <span>Sobre Nós</span>
-                  </a>
-                </li>
               </ul>
             </li>
           </ul>

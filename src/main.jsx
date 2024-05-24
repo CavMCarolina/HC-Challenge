@@ -13,7 +13,6 @@ import Sangue from "./Pages/Sangue.jsx";
 import Ultrassom from "./Pages/Ultrassom.jsx";
 import MeusAgendamentos from "./Pages/MeusAgendamentos.jsx";
 import MaisExames  from "./Pages/MaisExames.jsx";
-import Sobre from "./Pages/Sobre.jsx";
 
 const router = createBrowserRouter([
   {
@@ -30,8 +29,7 @@ const router = createBrowserRouter([
       { path: "voluntario/saibamais", element: <SaibaMais /> },
       { path: "agendamentos/meusagendamentos", element: <MeusAgendamentos/> },
       { path: "exames/maisexames", element: <MaisExames/> },
-      { path: "sobre", element: <Sobre /> },
-      { path: "*", element: <PageNotFound /> },
+      { path: "*", element: <PageNotFound /> }
     ],
   },
 ]);
